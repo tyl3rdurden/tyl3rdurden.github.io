@@ -6,3 +6,5 @@
 /projectSettingsUpdater.xml
 /.idea.tyl3rdurden.github.io.iml
 /contentModel.xml
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions
