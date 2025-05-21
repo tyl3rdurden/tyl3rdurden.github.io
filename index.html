@@ -21,8 +21,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">이준렬</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+                <span class="d-block d-lg-none" id="navbar-name">이준렬</span>
+                <span class="d-none d-lg-block" id="profile-image-container"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,23 +42,21 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        이
-                        <span class="text-primary">준렬</span>
+                    <h1 class="mb-0" id="main-name-heading">
+                        <span id="first-name">이</span>
+                        <span class="text-primary" id="last-name">준렬</span>
                     </h1>
-                    <div class="subheading mb-5">
-                        (010) 4511-3287 · 서울시 구로구 신도림동 419-4
-						<p><a href="mailto:jrl1103@gmail.com">jrl1103@gmail.com</a></p>
+                    <div class="subheading mb-5" id="contact-info">
+                        <span id="phone-address">(010) 4511-3287 · 서울시 구로구 신도림동 419-4</span>
+                    						<p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                     </div>
 
-                    <div class="lead mb-5">
-						클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것
-						<br>효율성, 편리성, 협동, 소통을 우선시하는 프로그래머
+                    <div class="lead mb-5" id="personal-statement">
+                    						<span id="statement-line1">클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것</span>
+                    						<br><span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
 					</div>
-
-
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github"></i></a>
+                    <div class="social-icons" id="social-links">
+                        <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
                     </div>
                 </div>
             </section>
@@ -66,97 +64,113 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <h2 class="mb-5" id="experience-heading">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-nexon">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">넥슨게임즈</div>
-                            <p><a href="https://bluearchive.nexon.com/home"><b>블루 아카이브</b></a> - Unity
+                            <h3 class="mb-0" id="job-title-nexon">클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-nexon">넥슨게임즈</div>
+                            <p id="project-nexon"><a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">블루 아카이브</b></a> <span id="tech-stack-nexon">- Unity</span>
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2024 - 현재</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - 현재</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">5민랩</div>
-                            <p><a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ"><b>미출시 오픈월드 액션 RPG</b></a> - Unreal 5
-                                <br>-Gameplay Ability System (GAS) 적용
-                                <br>-기획자가 블루프린트로 프로그래머 없이 다양한 버프들을 만들 수 있도록 시스템 구축
+                            <h3 class="mb-0" id="job-title-minlab">클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-minlab">5민랩</div>
+                            <p id="project-openworld"><a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ" id="project-link-openworld"><b id="project-title-openworld">미출시 오픈월드 액션 RPG</b></a> <span id="tech-stack-openworld">- Unreal 5</span>
+                                <ul id="openworld-project-details">
+                                    <li id="openworld-gas">Gameplay Ability System (GAS) 적용</li>
+                                    <li id="openworld-blueprint">기획자가 블루프린트로 프로그래머 없이 다양한 버프들을 만들 수 있도록 시스템 구축</li>
+                                </ul>
                             </p>
-                            <p><b>미출시 액션 RPG</b> - Unity
-                                <br>-단독 프로그래머로 빠른 프로토타이핑
-                                <br>-탑다운 액션 게임 베이스를 갖고 풀 3D 로 전환 및 액션(전투) 부터 UI (인벤토리 등) 모두 구현
+                            <p id="project-action-rpg"><b id="project-title-action-rpg">미출시 액션 RPG</b> <span id="tech-stack-action-rpg">- Unity</span>
+                                <ul id="action-rpg-project-details">
+                                    <li id="action-rpg-prototype">단독 프로그래머로 빠른 프로토타이핑</li>
+                                    <li id="action-rpg-conversion">탑다운 액션 게임 베이스를 갖고 풀 3D 로 전환 및 액션(전투) 부터 UI (인벤토리 등) 모두 구현</li>
+                                </ul>
                             </p>
-                            <p><b>딩컴 모바일</b> - Unity
-                                <br>-아트팀 기술 지원 (캐릭터 커스터마이제이션, 애니메이션 등)
-                                <br>-미러 라이브러리 사용한 멀티플레이어 작업
-                                <br>-전투 시스템 구현
+                            <p id="project-dingcom"><b id="project-title-dingcom">딩컴 모바일</b> <span id="tech-stack-dingcom">- Unity</span>
+                                <ul id="dingcom-project-details">
+                                    <li id="dingcom-art-support">아트팀 기술 지원 (캐릭터 커스터마이제이션, 애니메이션 등)</li>
+                                    <li id="dingcom-multiplayer">미러 라이브러리 사용한 멀티플레이어 작업</li>
+                                    <li id="dingcom-combat">전투 시스템 구현</li>
+                                </ul>
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2023 - May 2024</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-minlab">May 2023 - May 2024</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-wgames">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">유니티 클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">더블유게임즈</div>
-                            <p><a href="https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&hl=en&gl=US"><b>Undead World</b></a> - 방치형 RPG 게임 - Android / iOS
-                                <br>-아웃게임 UI/컨텐츠 개발
-                                <br>-빌드 시스템 관리 (젠킨스)
+                            <h3 class="mb-0" id="job-title-wgames">유니티 클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-wgames">더블유게임즈</div>
+                            <p id="project-undead"><a href="https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&hl=en&gl=US" id="project-link-undead"><b id="project-title-undead">Undead World</b></a> <span id="tech-stack-undead">- 방치형 RPG 게임 - Android / iOS</span>
+                                <ul id="undead-project-details">
+                                    <li id="undead-ui-content">아웃게임 UI/컨텐츠 개발</li>
+                                    <li id="undead-build-system">빌드 시스템 관리 (젠킨스)</li>
+                                </ul>
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2022 - May 2023</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-wgames">June 2022 - May 2023</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab-smash">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">유니티 클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">5민랩</div>
-                            <p><a href="https://store.steampowered.com/app/1352080/SMASH_LEGENDS/"><b>스메시 레전드</b></a> - PVP 대전 액션 게임 - Steam / Android / iOS
-                                <br>-레거시 코드 / 기술 부채 코드 리뉴얼 및 새로운 기능 추가 하기 쉽게 개선
-                                <br>-컨텐츠(맵, 모드, 캐릭터, VFX) 개발 생산성 향상을 위한 툴 제작/개선/유지보수
-                                <br>-인게임 컨텐츠 (신규 캐릭터) 개발
+                            <h3 class="mb-0" id="job-title-minlab-smash">유니티 클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-minlab-smash">5민랩</div>
+                            <p id="project-smash"><a href="https://store.steampowered.com/app/1352080/SMASH_LEGENDS/" id="project-link-smash"><b id="project-title-smash">스메시 레전드</b></a> <span id="tech-stack-smash">- PVP 대전 액션 게임 - Steam / Android / iOS</span>
+                                <ul id="smash-project-details">
+                                    <li id="smash-legacy-code">레거시 코드 / 기술 부채 코드 리뉴얼 및 새로운 기능 추가 하기 쉽게 개선</li>
+                                    <li id="smash-tool-dev">컨텐츠(맵, 모드, 캐릭터, VFX) 개발 생산성 향상을 위한 툴 제작/개선/유지보수</li>
+                                    <li id="smash-content-dev">인게임 컨텐츠 (신규 캐릭터) 개발</li>
+                                </ul>
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2021 - June 2022</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-minlab-smash">May 2021 - June 2022</span></div>
                     </div>
-					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">유니티 클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">아키핀</div>
-								<p><a href="http://www.archipin.com/helloludi/"><b>영어 교육 게임 - 헬로 루디 개발</b></a> - 안드로이드
-									<br>-컨텐츠 개발
-									<br>-편리한 테스팅을 위한 디버깅 메뉴 제작
-									<br>-애니메이션 state 및 trigger 관련 magic string 을 없애기 위해서 애니메이션 Asset Import 시 애셋을 읽어 Enum 으로 변환하는 툴 제작
-									<br>-UGUI 사용
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-archipin">
+					                        <div class="flex-grow-1">
+					                            <h3 class="mb-0" id="job-title-archipin">유니티 클라이언트 프로그래머</h3>
+					                            <div class="subheading mb-3" id="company-archipin">아키핀</div>
+								<p id="project-helloludi"><a href="http://www.archipin.com/helloludi/" id="project-link-helloludi"><b id="project-title-helloludi">영어 교육 게임 - 헬로 루디 개발</b></a> <span id="tech-stack-helloludi">- 안드로이드</span>
+									<ul id="helloludi-project-details">
+										<li id="helloludi-content">컨텐츠 개발</li>
+										<li id="helloludi-debug">편리한 테스팅을 위한 디버깅 메뉴 제작</li>
+										<li id="helloludi-animation">애니메이션 state 및 trigger 관련 magic string 을 없애기 위해서 애니메이션 Asset Import 시 애셋을 읽어 Enum 으로 변환하는 툴 제작</li>
+										<li id="helloludi-ui">UGUI 사용</li>
+									</ul>
 								</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">November 2020 - January 2021</span></div>
+					                        </div>
+					                        <div class="flex-shrink-0"><span class="text-primary" id="period-archipin">November 2020 - January 2021</span></div>
 					</div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-hero60">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">유니티 클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">안드로메다게임즈</div>
-								<p><a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&hl=ko"><b>60초 용사 출시</b></a> - 안드로이드
-									<br>-프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발
-									<br>-원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작
-									<br>-엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작
-									<br>-주로 UI/UX 담당, 서버와 정보 교류
-									<br>-NGUI 사용
-								</p>
+                            <h3 class="mb-0" id="job-title-andromeda-hero60">유니티 클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-andromeda-hero60">안드로메다게임즈</div>
+                    								<p id="project-hero60"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&hl=ko" id="project-link-hero60"><b id="project-title-hero60">60초 용사 출시</b></a> <span id="tech-stack-hero60">- 안드로이드</span>
+                    									<ul id="hero60-project-details">
+                    										<li id="hero60-dev-cycle">프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발</li>
+                    										<li id="hero60-unity-tools">원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작</li>
+                    										<li id="hero60-excel-vba">엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작</li>
+                    										<li id="hero60-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
+                    										<li id="hero60-ngui">NGUI 사용</li>
+                    									</ul>
+                    								</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2018 - February 2019</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-hero60">May 2018 - February 2019</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-billiards">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">유니티 클라이언트 프로그래머</h3>
-                            <div class="subheading mb-3">안드로메다게임즈</div>
-								<p><a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&hl=ko"><b>당구의 신 출시</b></a> - 안드로이드
-									<br>-프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발
-									<br>-주로 UI/UX 담당, 서버와 정보 교류
-									<br>-NGUI 사용
-								</p>
+                            <h3 class="mb-0" id="job-title-andromeda-billiards">유니티 클라이언트 프로그래머</h3>
+                            <div class="subheading mb-3" id="company-andromeda-billiards">안드로메다게임즈</div>
+                    								<p id="project-billiards"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&hl=ko" id="project-link-billiards"><b id="project-title-billiards">당구의 신 출시</b></a> <span id="tech-stack-billiards">- 안드로이드</span>
+                    									<ul id="billiards-project-details">
+                    										<li id="billiards-dev-cycle">프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발</li>
+                    										<li id="billiards-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
+                    										<li id="billiards-ngui">NGUI 사용</li>
+                    									</ul>
+                    								</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2015 - May 2016</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-billiards">February 2015 - May 2016</span></div>
                     </div>
                 </div>
             </section>
@@ -164,13 +178,13 @@
             <!-- Portfolio-->
             <section class="resume-section" id="portfolio">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Portfolio</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <h2 class="mb-5" id="portfolio-heading">Portfolio</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="portfolio-item-hexgem">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0"><a href="https://github.com/tyl3rdurden/HexGem">HexGem</a></h3>
-                            <div>Portfolio project of a classic simple brush style 3 match game</div>
-                            <p></p>
-                            <IMG SRC="https://i.imgur.com/ZfUgPO0.gif">
+                            <h3 class="mb-0" id="portfolio-title-hexgem"><a href="https://github.com/tyl3rdurden/HexGem" id="portfolio-link-hexgem">HexGem</a></h3>
+                            <div id="portfolio-description-hexgem">Portfolio project of a classic simple brush style 3 match game</div>
+                            <p id="portfolio-content-hexgem"></p>
+                            <IMG SRC="https://i.imgur.com/ZfUgPO0.gif" id="portfolio-image-hexgem">
                         </div>
                     </div>
                 </div>
@@ -179,25 +193,25 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <h2 class="mb-5" id="education-heading">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="education-entry-1">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">University of Maryland College-Park</h3>
-                            <div>Computer Science</div>
+                            <h3 class="mb-0" id="education-umd-title">University of Maryland College-Park</h3>
+                            <div id="education-umd-major">Computer Science</div>
                         </div>
                         <div class="flex-shrink-0">
-                            <span class="text-primary">
-							<p>August 2017 - May 2018</p>
-							<p>August 2019 - November 2020</p>
+                            <span class="text-primary" id="education-umd-dates">
+                    							<p id="education-umd-dates-1">August 2017 - May 2018</p>
+                    							<p id="education-umd-dates-2">August 2019 - November 2020</p>
 						    </span>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between" id="education-entry-2">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Concord Academy</h3>
+                            <h3 class="mb-0" id="education-concord-title">Concord Academy</h3>
                         </div>
                         <div class="flex-shrink-0">
-                            <span class="text-primary">August 2008 - June 2012</span>
+                            <span class="text-primary" id="education-concord-dates">August 2008 - June 2012</span>
                         </div>
                     </div>
                 </div>
@@ -206,8 +220,8 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <h2 class="mb-5" id="skills-heading">Skills</h2>
+                    <div class="subheading mb-3" id="programming-languages-subheading">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item">
 							<i class="devicon-csharp-plain"></i>
@@ -228,21 +242,21 @@
 							<i class="devicon-android-plain-wordmark"></i>
 						</li>
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
+                    <div class="subheading mb-3" id="workflow-subheading">Workflow</div>
+                    <ul id="workflow-details" class="fa-ul mb-0">
+                        <li id="workflow-requirements">
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Gather requirements
                         </li>
-                        <li>
+                        <li id="workflow-communication">
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Communicate with various cooperating/involved co-workers (Designer, Manager, Artist, QA etc.)
                         </li>
-                        <li>
+                        <li id="workflow-planning">
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Plan first, code second
                         </li>
-                        <li>
+                        <li id="workflow-agile">
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Agile Development & Scrum
                         </li>
@@ -253,27 +267,27 @@
             <!-- Interests-->
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>I'm a game developer first but I enjoy spending my time experiencing various story telling mediums such as games, TV shows, movies, and anime.
+                    <h2 class="mb-5" id="interests-heading">Interests</h2>
+                    <p id="interests-paragraph-1">I'm a game developer first but I enjoy spending my time experiencing various story telling mediums such as games, TV shows, movies, and anime.
                         I love being part of the ride involving great story telling and the feeling of having my jaw drop and just sitting in awe after the credits roll is one of
                         the greatest pleasures I can have. Just being able to truly enjoy and be part of the moment is something I really value and hope I can integrate in my games.</p>
-                    <p class="mb-0">I also enjoy spending too much time on reddit and enjoy anything from cat pictures to the latest programming advancements or discussions on the implementation of a game feature.</p>
+                    <p class="mb-0" id="interests-paragraph-2">I also enjoy spending too much time on reddit and enjoy anything from cat pictures to the latest programming advancements or discussions on the implementation of a game feature.</p>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Awards-->
             <section class="resume-section" id="extracurricular">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Extra Curriculars</h2>
-                    <p>I've always been interested in story telling and the passion people have. Whether it be creating a work of art that can only come together through the passion
+                    <h2 class="mb-5" id="extracurricular-heading">Extra Curriculars</h2>
+                    <p id="extracurricular-paragraph">I've always been interested in story telling and the passion people have. Whether it be creating a work of art that can only come together through the passion
                         of everyone involved or people being involved in an intense esports scene, the passion and fun they had was always something that inspired me. It has been over
                         10 years ago since I've captured those moments but these documentaries are something I'm still proud of and feel inspired by on rewatches.</p>
                     <br>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7q60bf0XTaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <ul id="documentary-list" class="fa-ul mb-0">
+                        <li id="documentary-item-1">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7q60bf0XTaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="documentary-video-1"></iframe>
                             <br><br>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlw_9--RPkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlw_9--RPkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="documentary-video-2"></iframe>
                         </li>
                     </ul>
                 </div>
