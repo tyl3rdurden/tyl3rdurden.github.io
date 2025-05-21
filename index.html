@@ -16,6 +16,20 @@
         <link href="css/styles.css" rel="stylesheet" />
 		<!-- DevIcon-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
+        <style>
+            .lang-toggle {
+                text-transform: none;
+                transition: color 0.15s ease-in-out;
+                border-left: 0.25rem solid transparent;
+            }
+            .lang-toggle:hover, .lang-toggle:active, .lang-toggle:focus {
+                color: #fff;
+                border-left: 0.25rem solid #bd5d38;
+            }
+            .lang-toggle i {
+                font-size: 0.85rem;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -34,6 +48,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular">Extra Curricular</a></li>
+                    <li class="nav-item"><a class="nav-link lang-toggle js-scroll-trigger" href="javascript:void(0);" id="langToggle"><i class="fas fa-globe mr-1"></i><span>한국어</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -302,5 +317,99 @@
         <script src="js/scripts.js"></script>
 		<!--Iconify-->
 		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <!-- Localization JS -->
+        <script>
+            function loadLanguage(lang) {
+                // Ensure language is either 'en' or 'ko'
+                lang = (lang === 'ko') ? 'ko' : 'en';
+
+                fetch('localization.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Make sure the language exists in our data
+                        const strings = data[lang] || {};
+
+                        // Apply translations to elements with matching IDs
+                        for (const key in strings) {
+                            const el = document.getElementById(key);
+                            if (el) {
+                                // Handle text content of elements appropriately
+                                if (el.tagName === 'A' ||
+                                    (el.children.length === 0 &&
+                                     !['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON'].includes(el.tagName))) {
+                                    el.innerText = strings[key];
+                                }
+                            }
+                        }
+
+                        // Update the document language attribute
+                        document.documentElement.lang = lang;
+
+                        // Store user preference
+                        localStorage.setItem('preferredLang', lang);
+
+                        // Update the toggle button to show the opposite language option
+                        const toggleButton = document.getElementById('langToggle');
+                        if (toggleButton) {
+                            const toggleSpan = toggleButton.querySelector('span');
+                            if (toggleSpan) {
+                                // Shows the language we would switch to, not the current one
+                                toggleSpan.innerText = lang === 'en' ? '한국어' : 'English';
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading language file:', error);
+                        // Fall back to English if there's an error
+                        if (lang !== 'en') {
+                            loadLanguage('en');
+                        }
+                    });
+            }
+
+            function toggleLanguage(e) {
+                if (e) e.preventDefault();
+                const currentLang = document.documentElement.lang || 'en';
+                const newLang = currentLang === 'en' ? 'ko' : 'en';
+                loadLanguage(newLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                // Detect user's preferred language
+                let userLang = navigator.language || navigator.userLanguage;
+                userLang = userLang.toLowerCase();
+
+                // Check localStorage first for returning visitors
+                let preferredLang = localStorage.getItem('preferredLang');
+
+                // If no stored preference, determine based on browser language
+                if (!preferredLang) {
+                    // Check if the browser language is Korean or starts with ko
+                    // This handles both 'ko' and 'ko-KR' formats
+                    if (userLang === 'ko' || userLang.startsWith('ko-')) {
+                        preferredLang = 'ko';
+                    } else {
+                        preferredLang = 'en'; // Default to English for all other languages
+                    }
+
+                    // Store this automatic choice in localStorage
+                    localStorage.setItem('preferredLang', preferredLang);
+                }
+
+                // Apply the selected language
+                loadLanguage(preferredLang);
+
+                // Set up language toggle button
+                const toggleButton = document.getElementById('langToggle');
+                if (toggleButton) {
+                    toggleButton.addEventListener('click', toggleLanguage);
+                }
+            });
+        </script>
     </body>
 </html>
