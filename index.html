@@ -29,6 +29,35 @@
             .lang-toggle i {
                 font-size: 0.85rem;
             }
+            .lang-toggle-top {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                border-radius: 50px;
+                padding: 0.3rem 0.8rem;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+                text-decoration: none;
+            }
+            .lang-toggle-top:hover {
+                color: #fff;
+                background-color: rgba(189, 93, 56, 0.4);
+                text-decoration: none;
+            }
+            .lang-toggle-top i {
+                font-size: 0.8rem;
+            }
+
+            @media (min-width: 992px) {
+                .lang-toggle-top {
+                    top: auto;
+                    right: 50%;
+                    transform: translateX(50%);
+                    bottom: 2rem;
+                }
+            }
         </style>
     </head>
     <body id="page-top">
@@ -38,6 +67,7 @@
                 <span class="d-block d-lg-none" id="navbar-name">이준렬</span>
                 <span class="d-none d-lg-block" id="profile-image-container"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
             </a>
+            <a class="lang-toggle-top d-none d-lg-block" href="javascript:void(0);" id="langToggle"><i class="fas fa-globe mr-1"></i><span>한국어</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
@@ -48,7 +78,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular">Extra Curricular</a></li>
-                    <li class="nav-item"><a class="nav-link lang-toggle js-scroll-trigger" href="javascript:void(0);" id="langToggle"><i class="fas fa-globe mr-1"></i><span>한국어</span></a></li>
+                    <li class="nav-item d-lg-none mt-3 text-center"><a class="nav-link lang-toggle" href="javascript:void(0);" id="langToggleMobile"><i class="fas fa-globe mr-1"></i><span>한국어</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -353,13 +383,24 @@
                         // Store user preference
                         localStorage.setItem('preferredLang', lang);
 
-                        // Update the toggle button to show the opposite language option
+                        // Update all toggle buttons to show the opposite language option
+                        const oppositeLang = lang === 'en' ? '한국어' : 'English';
+
+                        // Update desktop toggle button
                         const toggleButton = document.getElementById('langToggle');
                         if (toggleButton) {
                             const toggleSpan = toggleButton.querySelector('span');
                             if (toggleSpan) {
-                                // Shows the language we would switch to, not the current one
-                                toggleSpan.innerText = lang === 'en' ? '한국어' : 'English';
+                                toggleSpan.innerText = oppositeLang;
+                            }
+                        }
+
+                        // Update mobile toggle button
+                        const toggleButtonMobile = document.getElementById('langToggleMobile');
+                        if (toggleButtonMobile) {
+                            const toggleSpanMobile = toggleButtonMobile.querySelector('span');
+                            if (toggleSpanMobile) {
+                                toggleSpanMobile.innerText = oppositeLang;
                             }
                         }
                     })
@@ -404,10 +445,15 @@
                 // Apply the selected language
                 loadLanguage(preferredLang);
 
-                // Set up language toggle button
+                // Set up language toggle buttons (both desktop and mobile versions)
                 const toggleButton = document.getElementById('langToggle');
                 if (toggleButton) {
                     toggleButton.addEventListener('click', toggleLanguage);
+                }
+
+                const toggleButtonMobile = document.getElementById('langToggleMobile');
+                if (toggleButtonMobile) {
+                    toggleButtonMobile.addEventListener('click', toggleLanguage);
                 }
             });
         </script>
