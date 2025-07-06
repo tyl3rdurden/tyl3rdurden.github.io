@@ -54,9 +54,9 @@
 
     "job-title-archipin": "Unity Client Programmer",
     "company-archipin": "Archipin",
-    "project-title-helloludi": "English Education Game - Hello Ludi Development",
+    "project-title-helloludi": "English Education Game - Hello Ludi",
     "tech-stack-helloludi": "- Android",
-    "helloludi-content": "Content development",
+    "helloludi-content": "Minigame development",
     "helloludi-debug": "Created a comprehensive debug menu for efficient testing",
     "helloludi-animation": "Developed a tool that converts animation assets to enums, eliminating magic strings related to animation states and triggers during asset import",
     "helloludi-ui": "Used UGUI",
@@ -64,7 +64,7 @@
 
     "job-title-andromeda-hero60": "Unity Client Programmer",
     "company-andromeda-hero60": "Andromeda Games",
-    "project-title-hero60": "60 Second Hero Release",
+    "project-title-hero60": "60 Second Hero",
     "tech-stack-hero60": "- Android",
     "hero60-dev-cycle": "Worked on project from prototype to release, and major live-service updates for guild systems and raids",
     "hero60-unity-tools": "Created Unity editor tools to streamline testing and development workflows",
@@ -74,7 +74,7 @@
 
     "job-title-andromeda-billiards": "Unity Client Programmer",
     "company-andromeda-billiards": "Andromeda Games",
-    "project-title-billiards": "God of Billiards Release",
+    "project-title-billiards": "God of Billiards",
     "tech-stack-billiards": "- Android",
     "billiards-dev-cycle": "Worked on project from prototype to release, and major live-service updates for character systems and guilds",
     "billiards-ui-role": "UI/UX content development - Used NGUI",
