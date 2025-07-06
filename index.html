@@ -58,6 +58,37 @@
                     bottom: 2rem;
                 }
             }
+
+            /* Icon alignment styles */
+            .list-inline-item {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0.75rem;
+                margin-right: 1rem;
+                height: 3rem;
+                width: 3rem;
+            }
+
+            .list-inline-item .devicon,
+            .list-inline-item .iconify {
+                font-size: 2rem;
+                line-height: 1;
+                vertical-align: middle;
+            }
+
+            .list-inline.dev-icons {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            /* Simple left border for work authorization status */
+            #status-info {
+                border-left: 4px solid #bd7638;
+                padding-left: 10px;
+                font-weight: 500;
+            }
         </style>
     </head>
     <body id="page-top">
@@ -91,11 +122,13 @@
                         <span id="first-name">이</span>
                         <span class="text-primary" id="last-name">준렬</span>
                     </h1>
+                    <div class="subheading mb-5" id="status">
+                        <span id="status-info">U.S. Permanent Resident – No visa sponsorship required</span>
+                    </div>
                     <div class="subheading mb-5" id="contact-info">
                         <span id="phone-address">(010) 4511-3287 · 서울시 구로구 신도림동 419-4</span>
                     						<p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                     </div>
-
                     <div class="lead mb-5" id="personal-statement">
                     						<span id="statement-line1">클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것</span>
                     						<br><span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
@@ -115,7 +148,15 @@
                             <h3 class="mb-0" id="job-title-nexon">클라이언트 프로그래머</h3>
                             <div class="subheading mb-3" id="company-nexon">넥슨게임즈</div>
                             <p id="project-nexon"><a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">블루 아카이브</b></a> <span id="tech-stack-nexon">- Unity</span>
-                            </p>
+                            <ul id="ba-project-details">
+                                <li id="ba-1"></li>
+                                <li id="ba-2">Implemented seasonal content, including a railroad placement mini-game
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=73vNSgzlars" target="_blank">Video</a></li>
+                                    </ul>
+                                </li>
+                                <li id="ba-3"></li>
+                            </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - 현재</span></div>
                     </div>
@@ -138,8 +179,8 @@
                             <p id="project-dingcom"><b id="project-title-dingcom">딩컴 모바일</b> <span id="tech-stack-dingcom">- Unity</span>
                                 <ul id="dingcom-project-details">
                                     <li id="dingcom-art-support">아트팀 기술 지원 (캐릭터 커스터마이제이션, 애니메이션 등)</li>
-                                    <li id="dingcom-multiplayer">미러 라이브러리 사용한 멀티플레이어 작업</li>
                                     <li id="dingcom-combat">전투 시스템 구현</li>
+                                    <li id="dingcom-multiplayer">미러 라이브러리 사용한 멀티플레이어 작업</li>
                                 </ul>
                             </p>
                         </div>
@@ -196,8 +237,7 @@
                     										<li id="hero60-dev-cycle">프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발</li>
                     										<li id="hero60-unity-tools">원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작</li>
                     										<li id="hero60-excel-vba">엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작</li>
-                    										<li id="hero60-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
-                    										<li id="hero60-ngui">NGUI 사용</li>
+                    										<li id="hero60-ui-role">주로 UI/UX 담당, 서버와 정보 교류 - NGUI 사용</li>
                     									</ul>
                     								</p>
                         </div>
@@ -211,7 +251,6 @@
                     									<ul id="billiards-project-details">
                     										<li id="billiards-dev-cycle">프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발</li>
                     										<li id="billiards-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
-                    										<li id="billiards-ngui">NGUI 사용</li>
                     									</ul>
                     								</p>
                         </div>
@@ -269,23 +308,35 @@
                     <div class="subheading mb-3" id="programming-languages-subheading">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item">
-							<i class="devicon-csharp-plain"></i>
-						</li>
-						<li class="list-inline-item">
-							<i class="devicon-java-plain-wordmark"></i>
-						</li>
-						<li class="list-inline-item">
-							<i class="devicon-c-plain"></i>
-						</li>
-						<li class="list-inline-item">
-							<i class="devicon-git-plain-wordmark"></i>
-						</li>
-						<li class="list-inline-item">
-							<span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
-						</li>
+                            <i class="devicon-csharp-plain"></i>
+                        </li>
                         <li class="list-inline-item">
-							<i class="devicon-android-plain-wordmark"></i>
-						</li>
+                            <i class="devicon-java-plain-wordmark"></i>
+                        </li>
+                        <li class="list-inline-item">
+                            <i class="devicon-c-plain"></i>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:perforce" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:teamcity" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="simple-icons:unrealengine" data-inline="false"></span>
+                        </li>
                     </ul>
                     <div class="subheading mb-3" id="workflow-subheading">Workflow</div>
                     <ul id="workflow-details" class="fa-ul mb-0">
@@ -300,10 +351,6 @@
                         <li id="workflow-planning">
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Plan first, code second
-                        </li>
-                        <li id="workflow-agile">
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
                         </li>
                     </ul>
                 </div>
