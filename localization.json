@@ -15,6 +15,7 @@
     "tech-stack-nexon": "- Unity",
     "period-nexon": "May 2024 - Present",
     "ba-1": "Optimized runtime data handling by converting JSON to a binary format (MemoryPack), reducing memory usage by over 80% and improving CPU performance by 70%",
+    "ba-11": "Implemented BattlePass",
     "ba-2": "Implemented seasonal content, including a railroad placement mini-game",
     "ba-3": "Deputy Team Manager: mentored junior programmers, conducted code reviews, delegated tasks, and led regular check-ins",
 
