@@ -1,35 +1,101 @@
 doctype html
 html(lang='en')
-
     head
-
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
         meta(name='description', content='')
         meta(name='author', content='')
-
-        title Resume - Start Bootstrap Theme
-
+        title 이준렬 - 이력서
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
-
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js', crossorigin='anonymous')
-
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
-
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
-
+        // DevIcon
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css')
+        style.
+            .lang-toggle {
+                text-transform: none;
+                transition: color 0.15s ease-in-out;
+                border-left: 0.25rem solid transparent;
+            }
+            .lang-toggle:hover,
+            .lang-toggle:active,
+            .lang-toggle:focus {
+                color: #fff;
+                border-left: 0.25rem solid #bd5d38;
+            }
+            .lang-toggle i {
+                font-size: 0.85rem;
+            }
+            .lang-toggle-top {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                border-radius: 50px;
+                padding: 0.3rem 0.8rem;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+                text-decoration: none;
+            }
+            .lang-toggle-top:hover {
+                color: #fff;
+                background-color: rgba(189, 93, 56, 0.4);
+                text-decoration: none;
+            }
+            .lang-toggle-top i {
+                font-size: 0.8rem;
+            }
+            @media (min-width: 992px) {
+                .lang-toggle-top {
+                    top: auto;
+                    right: 50%;
+                    transform: translateX(50%);
+                    bottom: 2rem;
+                }
+            }
+            /* Icon alignment styles */
+            .list-inline-item {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0.75rem;
+                margin-right: 1rem;
+                height: 3rem;
+                width: 3rem;
+            }
+            .list-inline-item .devicon,
+            .list-inline-item .iconify {
+                font-size: 2rem;
+                line-height: 1;
+                vertical-align: middle;
+            }
+            .list-inline.dev-icons {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            /* Simple left border for work authorization status */
+            #status-info {
+                border-left: 4px solid #bd7638;
+                padding-left: 10px;
+                font-weight: 500;
+            }
     body#page-top
-
         // Navigation
         nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             a.navbar-brand.js-scroll-trigger(href='#page-top')
-                span.d-block.d-lg-none Clarence Taylor
-                span.d-none.d-lg-block
+                span#navbar-name.d-block.d-lg-none 이준렬
+                span#profile-image-container.d-none.d-lg-block
                     img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='')
+            a#langToggle.lang-toggle-top.d-none.d-lg-block(href='javascript:void(0);')
+                i.fas.fa-globe.mr-1
+                span 한국어
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
@@ -39,219 +105,371 @@ html(lang='en')
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#experience') Experience
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#education') Education
+                        a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
+                    // <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#skills') Skills
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#interests') Interests
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#awards') Awards
-
+                        a.nav-link.js-scroll-trigger(href='#extracurricular') Extra Curricular
+                    li.nav-item.d-lg-none.mt-3.text-center
+                        a#langToggleMobile.nav-link.lang-toggle(href='javascript:void(0);')
+                            i.fas.fa-globe.mr-1
+                            span 한국어
         // Page Content
         .container-fluid.p-0
-
             // About
             section#about.resume-section
                 .resume-section-content
-                    h1.mb-0
-                        | Clarence 
-                        span.text-primary Taylor
-                    .subheading.mb-5
-                        | 3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 · 
-                        a(href='mailto:name@email.com') name@email.com
-                    p.lead.mb-5
-                        | I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-                    .social-icons
-                        a.social-icon(href='#')
-                            i.fab.fa-linkedin-in
-                        a.social-icon(href='#')
-                            i.fab.fa-github
-                        a.social-icon(href='#')
-                            i.fab.fa-twitter
-                        a.social-icon(href='#')
-                            i.fab.fa-facebook-f
-
+                    h1#main-name-heading.mb-0
+                        span#first-name 이
+                        span#last-name.text-primary 준렬
+                    .subheading#status.mb-5
+                        span#status-info U.S. Permanent Resident – No visa sponsorship required
+                    .subheading#contact-info.mb-5
+                        span#phone-address (010) 4511-3287 · 서울시 구로구 신도림동 419-4
+                        p#email-container
+                            a#email-link(href='mailto:jrl1103@gmail.com') jrl1103@gmail.com
+                    .lead#personal-statement.mb-5
+                        span#statement-line1 클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것
+                        br
+                        span#statement-line2 효율성, 편리성, 협동, 소통을 우선시하는 프로그래머
+                    .social-icons#social-links
+                        a#github-link.social-icon(href='https://github.com/tyl3rdurden/HexGem')
+                            i#github-icon.fab.fa-github
             hr.m-0
-
             // Experience
             section#experience.resume-section
-               .resume-section-content
-                    h2.mb-5 Experience
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Senior Web Developer
-                            .subheading.mb-3 Intelitec Solutions
-                            p
-                                | Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-                        .flex-shrink-0
-                            span.text-primary March 2013 - Present
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Web Developer
-                            .subheading.mb-3 Intelitec Solutions
-                            p
-                                | Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                        .flex-shrink-0
-                            span.text-primary December 2011 - March 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Junior Web Designer
-                            .subheading.mb-3 Shout! Media Productions
-                            p
-                                | Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                        .flex-shrink-0
-                            span.text-primary July 2010 - December 2011
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between
-                        .flex-grow-1
-                            h3.mb-0 Web Design Intern
-                            .subheading.mb-3 Shout! Media Productions
-                            p
-                                | Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                        .flex-shrink-0
-                            span.text-primary September 2008 - June 2010
-
-            hr.m-0
-
-            // Education
-            section#education.resume-section
                 .resume-section-content
-                    h2.mb-5 Education
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    h2#experience-heading.mb-5 Experience
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-nexon
                         .flex-grow-1
-                            h3.mb-0 University of Colorado Boulder
-                            .subheading.mb-3 Bachelor of Science
-                            div Computer Science - Web Development Track
-                            p GPA: 3.23
+                            h3#job-title-nexon.mb-0 클라이언트 프로그래머
+                            .subheading#company-nexon.mb-3 넥슨게임즈
+                            p#project-nexon
+                                a#project-link-nexon(href='https://bluearchive.nexon.com/home')
+                                    b#project-title-nexon 블루 아카이브
+                                = ' '
+                                span#tech-stack-nexon - Unity
+                            ul#ba-project-details
+                                li#ba-1
+                                li#ba-11
+                                li#ba-2
+                                    | Implemented seasonal content, including a railroad placement mini-game
+                                    ul
+                                        li
+                                            a(href='https://www.youtube.com/watch?v=73vNSgzlars', target='_blank') Video
+                                li#ba-3
                         .flex-shrink-0
-                            span.text-primary August 2006 - May 2010
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between
+                            span#period-nexon.text-primary May 2024 - 현재
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-minlab
                         .flex-grow-1
-                            h3.mb-0 James Buchanan High School
-                            .subheading.mb-3 Technology Magnet Program
-                            p GPA: 3.56
+                            h3#job-title-minlab.mb-0 클라이언트 프로그래머
+                            .subheading#company-minlab.mb-3 5민랩
+                            p#project-openworld
+                                a#project-link-openworld(href='https://www.youtube.com/watch?v=ErjxwLDKdkQ')
+                                    b#project-title-openworld 미출시 오픈월드 액션 RPG
+                                = ' '
+                                span#tech-stack-openworld - Unreal 5
+                            ul#openworld-project-details
+                                li#openworld-gas Gameplay Ability System (GAS) 적용
+                                li#openworld-blueprint 기획자가 블루프린트로 프로그래머 없이 다양한 버프들을 만들 수 있도록 시스템 구축
+                            p#project-action-rpg
+                                b#project-title-action-rpg 미출시 액션 RPG
+                                = ' '
+                                span#tech-stack-action-rpg - Unity
+                            ul#action-rpg-project-details
+                                li#action-rpg-prototype 단독 프로그래머로 빠른 프로토타이핑
+                                li#action-rpg-conversion 탑다운 액션 게임 베이스를 갖고 풀 3D 로 전환 및 액션(전투) 부터 UI (인벤토리 등) 모두 구현
+                            p#project-dingcom
+                                b#project-title-dingcom 딩컴 모바일
+                                = ' '
+                                span#tech-stack-dingcom - Unity
+                            ul#dingcom-project-details
+                                li#dingcom-art-support 아트팀 기술 지원 (캐릭터 커스터마이제이션, 애니메이션 등)
+                                li#dingcom-combat 전투 시스템 구현
+                                li#dingcom-multiplayer 미러 라이브러리 사용한 멀티플레이어 작업
                         .flex-shrink-0
-                            span.text-primary August 2002 - May 2006
-
+                            span#period-minlab.text-primary May 2023 - May 2024
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-wgames
+                        .flex-grow-1
+                            h3#job-title-wgames.mb-0 유니티 클라이언트 프로그래머
+                            .subheading#company-wgames.mb-3 더블유게임즈
+                            p#project-undead
+                                a#project-link-undead(href='https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&hl=en&gl=US')
+                                    b#project-title-undead Undead World
+                                = ' '
+                                span#tech-stack-undead - 방치형 RPG 게임 - Android / iOS
+                            ul#undead-project-details
+                                li#undead-ui-content 아웃게임 UI/컨텐츠 개발
+                                li#undead-build-system 빌드 시스템 관리 (젠킨스)
+                        .flex-shrink-0
+                            span#period-wgames.text-primary June 2022 - May 2023
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-minlab-smash
+                        .flex-grow-1
+                            h3#job-title-minlab-smash.mb-0 유니티 클라이언트 프로그래머
+                            .subheading#company-minlab-smash.mb-3 5민랩
+                            p#project-smash
+                                a#project-link-smash(href='https://store.steampowered.com/app/1352080/SMASH_LEGENDS/')
+                                    b#project-title-smash 스메시 레전드
+                                = ' '
+                                span#tech-stack-smash - PVP 대전 액션 게임 - Steam / Android / iOS
+                            ul#smash-project-details
+                                li#smash-legacy-code 레거시 코드 / 기술 부채 코드 리뉴얼 및 새로운 기능 추가 하기 쉽게 개선
+                                li#smash-tool-dev 컨텐츠(맵, 모드, 캐릭터, VFX) 개발 생산성 향상을 위한 툴 제작/개선/유지보수
+                                li#smash-content-dev 인게임 컨텐츠 (신규 캐릭터) 개발
+                        .flex-shrink-0
+                            span#period-minlab-smash.text-primary May 2021 - June 2022
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-andromeda-hero60
+                        .flex-grow-1
+                            h3#job-title-andromeda-hero60.mb-0 유니티 클라이언트 프로그래머
+                            .subheading#company-andromeda-hero60.mb-3 안드로메다게임즈
+                            p#project-hero60
+                                a#project-link-hero60(href='https://play.google.com/store/apps/details?id=com.andromedagames.hero60&hl=ko')
+                                    b#project-title-hero60 60초 용사 출시
+                                = ' '
+                                span#tech-stack-hero60 - 안드로이드
+                            ul#hero60-project-details
+                                li#hero60-dev-cycle 프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발
+                                li#hero60-unity-tools 원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작
+                                li#hero60-excel-vba 엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작
+                                li#hero60-ui-role 주로 UI/UX 담당, 서버와 정보 교류 - NGUI 사용
+                        .flex-shrink-0
+                            span#period-andromeda-hero60.text-primary May 2018 - February 2019
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#experience-andromeda-billiards
+                        .flex-grow-1
+                            h3#job-title-andromeda-billiards.mb-0 유니티 클라이언트 프로그래머
+                            .subheading#company-andromeda-billiards.mb-3 안드로메다게임즈
+                            p#project-billiards
+                                a#project-link-billiards(href='https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&hl=ko')
+                                    b#project-title-billiards 당구의 신 출시
+                                = ' '
+                                span#tech-stack-billiards - 안드로이드
+                            ul#billiards-project-details
+                                li#billiards-dev-cycle 프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발
+                                li#billiards-ui-role 주로 UI/UX 담당, 서버와 정보 교류
+                        .flex-shrink-0
+                            span#period-andromeda-billiards.text-primary February 2015 - May 2016
             hr.m-0
-
+            // Portfolio
+            section#portfolio.resume-section
+                .resume-section-content
+                    h2#portfolio-heading.mb-5 Portfolio
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5#portfolio-item-hexgem
+                        .flex-grow-1
+                            h3#portfolio-title-hexgem.mb-0
+                                a#portfolio-link-hexgem(href='https://github.com/tyl3rdurden/HexGem') HexGem
+                            div#portfolio-description-hexgem Portfolio project of a classic simple brush style 3 match game
+                            p#portfolio-content-hexgem
+                            img#portfolio-image-hexgem(src='https://i.imgur.com/ZfUgPO0.gif')
+            hr.m-0
+            // Education
+            //
+                <section class="resume-section" id="education">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5" id="education-heading">Education</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="education-entry-1">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0" id="education-umd-title">University of Maryland College-Park</h3>
+                                <div id="education-umd-major">Computer Science</div>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="text-primary" id="education-umd-dates">
+                                    <p id="education-umd-dates-1">August 2017 - May 2018</p>
+                                    <p id="education-umd-dates-2">August 2019 - November 2020</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row justify-content-between" id="education-entry-2">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0" id="education-concord-title">Concord Academy</h3>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="text-primary" id="education-concord-dates">August 2008 - June 2012</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="m-0" />
             // Skills
             section#skills.resume-section
                 .resume-section-content
-                    h2.mb-5 Skills
-                    .subheading.mb-3 Programming Languages & Tools
+                    h2#skills-heading.mb-5 Skills
+                    .subheading#programming-languages-subheading.mb-3 Programming Languages & Tools
                     ul.list-inline.dev-icons
                         li.list-inline-item
-                            i.fab.fa-html5
+                            i.devicon-csharp-plain
                         li.list-inline-item
-                            i.fab.fa-css3-alt
+                            i.devicon-java-plain-wordmark
                         li.list-inline-item
-                            i.fab.fa-js-square
+                            i.devicon-c-plain
                         li.list-inline-item
-                            i.fab.fa-angular
+                            span.iconify(data-icon='simple-icons:perforce', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-react
+                            span.iconify(data-icon='simple-icons:git', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-node-js
+                            span.iconify(data-icon='file-icons:svn', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-sass
+                            span.iconify(data-icon='simple-icons:jenkins', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-less
+                            span.iconify(data-icon='simple-icons:teamcity', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-wordpress
+                            span.iconify(data-icon='simple-icons:unity', data-inline='false')
                         li.list-inline-item
-                            i.fab.fa-gulp
-                        li.list-inline-item
-                            i.fab.fa-grunt
-                        li.list-inline-item
-                            i.fab.fa-npm
-                    .subheading.mb-3 Workflow
-                    ul.fa-ul.mb-0
-                        li
+                            span.iconify(data-icon='simple-icons:unrealengine', data-inline='false')
+                    .subheading#workflow-subheading.mb-3 Workflow
+                    ul#workflow-details.fa-ul.mb-0
+                        li#workflow-requirements
                             span.fa-li
                                 i.fas.fa-check
-                            | Mobile-First, Responsive Design
-                        li
+                            | Gather requirements
+                        li#workflow-communication
                             span.fa-li
                                 i.fas.fa-check
-                            | Cross Browser Testing & Debugging
-                        li
+                            | Communicate with various cooperating/involved co-workers (Designer, Manager, Artist, QA etc.)
+                        li#workflow-planning
                             span.fa-li
                                 i.fas.fa-check
-                            | Cross Functional Teams
-                        li
-                            span.fa-li
-                                i.fas.fa-check
-                            | Agile Development & Scrum
-
+                            | Plan first, code second
             hr.m-0
-
             // Interests
             section#interests.resume-section
                 .resume-section-content
-                    h2.mb-5 Interests
-                    p
-                        | Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
-                    p.mb-0
-                        | When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
-
+                    h2#interests-heading.mb-5 Interests
+                    p#interests-paragraph-1
+                        | I'm a game developer first but I enjoy spending my time experiencing various story telling mediums such as games, TV shows, movies, and anime. I love being part of the ride involving great story telling and the feeling of having my jaw drop and just sitting in awe after the credits roll is one of the greatest pleasures I can have. Just being able to truly enjoy and be part of the moment is something I really value and hope I can integrate in my games.
+                    p#interests-paragraph-2.mb-0
+                        | I also enjoy spending too much time on reddit and enjoy anything from cat pictures to the latest programming advancements or discussions on the implementation of a game feature.
             hr.m-0
-
             // Awards
-            section#awards.resume-section
+            section#extracurricular.resume-section
                 .resume-section-content
-                    h2.mb-5 Awards & Certifications
-                    ul.fa-ul.mb-0
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Google Analytics Certified Developer
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Mobile Web Specialist - Google Certification
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 2
-                            sup nd 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - James Buchanan High School - Hackathon 2006
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 3
-                            sup rd 
-                            | Place - James Buchanan High School - Hackathon 2005
-
+                    h2#extracurricular-heading.mb-5 Extra Curriculars
+                    p#extracurricular-paragraph
+                        | I've always been interested in story telling and the passion people have. Whether it be creating a work of art that can only come together through the passion of everyone involved or people being involved in an intense esports scene, the passion and fun they had was always something that inspired me. It has been over 10 years ago since I've captured those moments but these documentaries are something I'm still proud of and feel inspired by on rewatches.
+                    br
+                    ul#documentary-list.fa-ul.mb-0
+                        li#documentary-item-1
+                            iframe#documentary-video-1(width='560', height='315', src='https://www.youtube.com/embed/7q60bf0XTaI', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen)
+                            br
+                            br
+                            iframe#documentary-video-2(width='560', height='315', src='https://www.youtube.com/embed/Tlw_9--RPkM', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen)
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
-
         // Third party plugin JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
-
         // Core theme JS
         script(src='js/scripts.js')
+        // Iconify
+        script(src='https://code.iconify.design/1/1.0.7/iconify.min.js')
+        // Localization JS
+        script.
+            function loadLanguage(lang) {
+                // Ensure language is either 'en' or 'ko'
+                lang = (lang === 'ko') ? 'ko' : 'en';
+
+                fetch('localization.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Make sure the language exists in our data
+                        const strings = data[lang] || {};
+
+                        // Apply translations to elements with matching IDs
+                        for (const key in strings) {
+                            const el = document.getElementById(key);
+                            if (el) {
+                                // Handle text content of elements appropriately
+                                if (el.tagName === 'A' ||
+                                    (el.children.length === 0 &&
+                                     !['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON'].includes(el.tagName))) {
+                                    el.innerText = strings[key];
+                                }
+                            }
+                        }
+
+                        // Update the document language attribute
+                        document.documentElement.lang = lang;
+
+                        // Store user preference
+                        localStorage.setItem('preferredLang', lang);
+
+                        // Update all toggle buttons to show the opposite language option
+                        const oppositeLang = lang === 'en' ? '한국어' : 'English';
+
+                        // Update desktop toggle button
+                        const toggleButton = document.getElementById('langToggle');
+                        if (toggleButton) {
+                            const toggleSpan = toggleButton.querySelector('span');
+                            if (toggleSpan) {
+                                toggleSpan.innerText = oppositeLang;
+                            }
+                        }
+
+                        // Update mobile toggle button
+                        const toggleButtonMobile = document.getElementById('langToggleMobile');
+                        if (toggleButtonMobile) {
+                            const toggleSpanMobile = toggleButtonMobile.querySelector('span');
+                            if (toggleSpanMobile) {
+                                toggleSpanMobile.innerText = oppositeLang;
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading language file:', error);
+                        // Fall back to English if there's an error
+                        if (lang !== 'en') {
+                            loadLanguage('en');
+                        }
+                    });
+            }
+
+            function toggleLanguage(e) {
+                if (e) e.preventDefault();
+                const currentLang = document.documentElement.lang || 'en';
+                const newLang = currentLang === 'en' ? 'ko' : 'en';
+                loadLanguage(newLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                // Detect user's preferred language
+                let userLang = navigator.language || navigator.userLanguage;
+                userLang = userLang.toLowerCase();
+
+                // Check localStorage first for returning visitors
+                let preferredLang = localStorage.getItem('preferredLang');
+
+                // If no stored preference, determine based on browser language
+                if (!preferredLang) {
+                    // Check if the browser language is Korean or starts with ko
+                    // This handles both 'ko' and 'ko-KR' formats
+                    if (userLang === 'ko' || userLang.startsWith('ko-')) {
+                        preferredLang = 'ko';
+                    } else {
+                        preferredLang = 'en'; // Default to English for all other languages
+                    }
+
+                    // Store this automatic choice in localStorage
+                    localStorage.setItem('preferredLang', preferredLang);
+                }
+
+                // Apply the selected language
+                loadLanguage(preferredLang);
+
+                // Set up language toggle buttons (both desktop and mobile versions)
+                const toggleButton = document.getElementById('langToggle');
+                if (toggleButton) {
+                    toggleButton.addEventListener('click', toggleLanguage);
+                }
+
+                const toggleButtonMobile = document.getElementById('langToggleMobile');
+                if (toggleButtonMobile) {
+                    toggleButtonMobile.addEventListener('click', toggleLanguage);
+                }
+            });
