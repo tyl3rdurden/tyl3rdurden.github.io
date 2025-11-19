@@ -3,7 +3,8 @@
     "name": "startbootstrap-resume",
     "version": "6.0.2",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && npm run build:locales",
+        "build:locales": "node scripts/build-localized-pages.js",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
@@ -39,6 +40,7 @@
         "axios": "^1.9.0",
         "bootstrap": "^5.3.6",
         "browserslist": "4.16.5",
+        "cheerio": "^1.1.2",
         "debug": "4.3.1",
         "hosted-git-info": "2.8.9",
         "lodash": "4.17.21",
