@@ -12,15 +12,17 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/css/styles.css" rel="stylesheet">
-		<!-- DevIcon-->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
+        <!-- DevIcon-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
         <style>
             .lang-toggle {
                 text-transform: none;
                 transition: color 0.15s ease-in-out;
                 border-left: 0.25rem solid transparent;
             }
-            .lang-toggle:hover, .lang-toggle:active, .lang-toggle:focus {
+            .lang-toggle:hover,
+            .lang-toggle:active,
+            .lang-toggle:focus {
                 color: #fff;
                 border-left: 0.25rem solid #bd5d38;
             }
@@ -96,7 +98,10 @@
                 <span class="d-block d-lg-none" id="navbar-name">Lee Joon Ryul</span>
                 <span class="d-none d-lg-block" id="profile-image-container"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/profile.jpg" alt=""></span>
             </a>
-            <a class="lang-toggle-top d-none d-lg-block" data-lang-link="alternate" href="/kr/"><i class="fas fa-globe mr-1"></i><span>한국어</span></a>
+            <a class="lang-toggle-top d-none d-lg-block" data-lang-link="alternate" href="/kr/">
+                <i class="fas fa-globe mr-1"></i>
+                <span>한국어</span>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
@@ -107,7 +112,12 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular">Extra Curricular</a></li>
-                    <li class="nav-item d-lg-none mt-3 text-center"><a class="nav-link lang-toggle" data-lang-link="alternate" href="/kr/"><i class="fas fa-globe mr-1"></i><span>한국어</span></a></li>
+                    <li class="nav-item d-lg-none mt-3 text-center">
+                        <a class="nav-link lang-toggle" data-lang-link="alternate" href="/kr/">
+                            <i class="fas fa-globe mr-1"></i>
+                            <span>한국어</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -124,12 +134,14 @@
                         <span id="status-info">U.S. Permanent Resident – No visa sponsorship required</span>
                     </div>
                     <div class="subheading mb-5" id="contact-info">
-                        <span id="phone-address">(010) 4511-3287</span>
-                    						<p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
+                        <span id="phone-address">(443) 324-1161 · Baltimore, USA</span>
+                        <p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                     </div>
                     <div class="lead mb-5" id="personal-statement">
-                    						<span id="statement-line1">Senior Unity client engineer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.</span>
-					</div>
+                        <span id="statement-line1">Senior Unity client engineer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.</span>
+                        <br>
+                        <span id="statement-line2"></span>
+                    </div>
                     <div class="social-icons" id="social-links">
                         <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
                     </div>
@@ -144,43 +156,53 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-nexon">Client Programmer &amp; Deputy Team Manager</h3>
                             <div class="subheading mb-3" id="company-nexon">Nexon Games</div>
-                            <p id="project-nexon"><a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">Blue Archive</b></a> <span id="tech-stack-nexon">- Unity</span>
-                            </p><ul id="ba-project-details">
-                                <li id="ba-1">Optimized runtime data handling by converting JSON to a binary format (MemoryPack), reducing memory usage by over 80% and improving CPU performance by 70%</li>
-                                <li id="ba-11">Implemented BattlePass</li>
-                                <li id="ba-2">Implemented seasonal content, including a railroad placement mini-game
-                                    <ul>
-                                        <li><a href="https://www.youtube.com/watch?v=73vNSgzlars" target="_blank">Video</a></li>
-                                    </ul>
-                                </li>
-                                <li id="ba-3">Deputy Team Manager: mentored junior programmers, conducted code reviews, delegated tasks, and led regular check-ins</li>
-                            </ul>
+                            <div id="project-nexon">
+                                <a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">Blue Archive</b></a>
+                                <span id="tech-stack-nexon">- Unity</span>
+                                <ul id="ba-project-details">
+                                    <li id="ba-1">Optimized runtime data handling by converting JSON to a binary format (MemoryPack), reducing memory usage by over 80% and improving CPU performance by 70%</li>
+                                    <li id="ba-11">Implemented BattlePass</li>
+                                    <li id="ba-2">
+                                        Implemented seasonal content, including a railroad placement mini-game
+                                        <ul>
+                                            <li><a href="https://www.youtube.com/watch?v=73vNSgzlars" target="_blank">Video</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="ba-3">Deputy Team Manager: mentored junior programmers, conducted code reviews, delegated tasks, and led regular check-ins</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - April 2026</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab">
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-minlab">Client Programmer</h3>
                             <div class="subheading mb-3" id="company-minlab">5minlab</div>
-                            <p id="project-openworld"><a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ" id="project-link-openworld"><b id="project-title-openworld">Unreleased Open World Action RPG</b></a> <span id="tech-stack-openworld">- Unreal 5</span>
-                                </p><ul id="openworld-project-details">
+                            <div id="project-openworld">
+                                <a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ" id="project-link-openworld"><b id="project-title-openworld">Unreleased Open World Action RPG</b></a>
+                                <span id="tech-stack-openworld">- Unreal 5</span>
+                                <ul id="openworld-project-details">
                                     <li id="openworld-gas">Implemented Gameplay Ability System (GAS)</li>
                                     <li id="openworld-blueprint">Developed a system enabling designers to create various buffs using blueprints without programmer assistance</li>
                                 </ul>
-                            <p></p>
-                            <p id="project-action-rpg"><b id="project-title-action-rpg">Unreleased Action RPG</b> <span id="tech-stack-action-rpg">- Unity</span>
-                                </p><ul id="action-rpg-project-details">
+                            </div>
+                            <div id="project-action-rpg">
+                                <b id="project-title-action-rpg">Unreleased Action RPG</b>
+                                <span id="tech-stack-action-rpg">- Unity</span>
+                                <ul id="action-rpg-project-details">
                                     <li id="action-rpg-prototype">Led rapid prototyping as the sole programmer</li>
                                     <li id="action-rpg-conversion">Converted a top-down action game to full 3D and implemented all systems from combat mechanics to UI components (inventory, etc.)</li>
                                 </ul>
-                            <p></p>
-                            <p id="project-dingcom"><b id="project-title-dingcom">Dinkum Mobile</b> <span id="tech-stack-dingcom">- Unity</span>
-                                </p><ul id="dingcom-project-details">
+                            </div>
+                            <div id="project-dingcom">
+                                <b id="project-title-dingcom">Dinkum Mobile</b>
+                                <span id="tech-stack-dingcom">- Unity</span>
+                                <ul id="dingcom-project-details">
                                     <li id="dingcom-art-support">Provided technical support for the art team (character customization, animation, etc.)</li>
                                     <li id="dingcom-combat">Designed and implemented the combat system</li>
                                     <li id="dingcom-multiplayer">Used Mirror library for multiplayer functionality</li>
                                 </ul>
-                            <p></p>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-minlab">May 2023 - May 2024</span></div>
                     </div>
@@ -188,12 +210,14 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-wgames">Unity Client Programmer</h3>
                             <div class="subheading mb-3" id="company-wgames">DoubleU Games</div>
-                            <p id="project-undead"><a href="https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&amp;hl=en&amp;gl=US" id="project-link-undead"><b id="project-title-undead">Undead World</b></a> <span id="tech-stack-undead">- Idle RPG Game - Android / iOS</span>
-                                </p><ul id="undead-project-details">
+                            <div id="project-undead">
+                                <a href="https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&amp;hl=en&amp;gl=US" id="project-link-undead"><b id="project-title-undead">Undead World</b></a>
+                                <span id="tech-stack-undead">- Idle RPG Game - Android / iOS</span>
+                                <ul id="undead-project-details">
                                     <li id="undead-ui-content">Out-game UI/UX content development</li>
                                     <li id="undead-build-system">Managed build system infrastructure (Jenkins)</li>
                                 </ul>
-                            <p></p>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-wgames">June 2022 - May 2023</span></div>
                     </div>
@@ -201,13 +225,15 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-minlab-smash">Unity Client Programmer</h3>
                             <div class="subheading mb-3" id="company-minlab-smash">5minlab</div>
-                            <p id="project-smash"><a href="https://store.steampowered.com/app/1352080/SMASH_LEGENDS/" id="project-link-smash"><b id="project-title-smash">Smash Legends</b></a> <span id="tech-stack-smash">- PVP Battle Action Game - Steam / Android / iOS</span>
-                                </p><ul id="smash-project-details">
+                            <div id="project-smash">
+                                <a href="https://store.steampowered.com/app/1352080/SMASH_LEGENDS/" id="project-link-smash"><b id="project-title-smash">Smash Legends</b></a>
+                                <span id="tech-stack-smash">- PVP Battle Action Game - Steam / Android / iOS</span>
+                                <ul id="smash-project-details">
                                     <li id="smash-legacy-code">Refactored legacy code and reduced technical debt to facilitate easier feature additions</li>
                                     <li id="smash-tool-dev">Created, improved, and maintained tools to enhance content development productivity (maps, game modes, characters, VFX)</li>
                                     <li id="smash-content-dev">In-game content (new character) development</li>
                                 </ul>
-                            <p></p>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-minlab-smash">May 2021 - June 2022</span></div>
                     </div>
@@ -215,14 +241,16 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-andromeda-hero60">Unity Client Programmer</h3>
                             <div class="subheading mb-3" id="company-andromeda-hero60">Andromeda Games</div>
-                    								<p id="project-hero60"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&amp;hl=ko" id="project-link-hero60"><b id="project-title-hero60">60 Second Hero</b></a> <span id="tech-stack-hero60">- Android</span>
-                    									</p><ul id="hero60-project-details">
-                    										<li id="hero60-dev-cycle">Worked on project from prototype to release, and major live-service updates for guild systems and raids</li>
-                    										<li id="hero60-unity-tools">Created Unity editor tools to streamline testing and development workflows</li>
-                    										<li id="hero60-excel-vba">Developed an integrated Excel+VBA solution that enabled efficient balancing by allowing team members to set up party combinations and calculate DPS based on character, equipment, skill, and set buff data tables without connecting to the game</li>
-                    										<li id="hero60-ui-role">UI/UX content development - Used NGUI</li>
-                    									</ul>
-                    								<p></p>
+                            <div id="project-hero60">
+                                <a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&amp;hl=ko" id="project-link-hero60"><b id="project-title-hero60">60 Second Hero</b></a>
+                                <span id="tech-stack-hero60">- Android</span>
+                                <ul id="hero60-project-details">
+                                    <li id="hero60-dev-cycle">Worked on project from prototype to release, and major live-service updates for guild systems and raids</li>
+                                    <li id="hero60-unity-tools">Created Unity editor tools to streamline testing and development workflows</li>
+                                    <li id="hero60-excel-vba">Developed an integrated Excel+VBA solution that enabled efficient balancing by allowing team members to set up party combinations and calculate DPS based on character, equipment, skill, and set buff data tables without connecting to the game</li>
+                                    <li id="hero60-ui-role">UI/UX content development - Used NGUI</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-hero60">May 2018 - February 2019</span></div>
                     </div>
@@ -230,12 +258,14 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="job-title-andromeda-billiards">Unity Client Programmer</h3>
                             <div class="subheading mb-3" id="company-andromeda-billiards">Andromeda Games</div>
-                    								<p id="project-billiards"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&amp;hl=ko" id="project-link-billiards"><b id="project-title-billiards">God of Billiards</b></a> <span id="tech-stack-billiards">- Android</span>
-                    									</p><ul id="billiards-project-details">
-                    										<li id="billiards-dev-cycle">Worked on project from prototype to release, and major live-service updates for character systems and guilds</li>
-                    										<li id="billiards-ui-role">UI/UX content development - Used NGUI</li>
-                    									</ul>
-                    								<p></p>
+                            <div id="project-billiards">
+                                <a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&amp;hl=ko" id="project-link-billiards"><b id="project-title-billiards">God of Billiards</b></a>
+                                <span id="tech-stack-billiards">- Android</span>
+                                <ul id="billiards-project-details">
+                                    <li id="billiards-dev-cycle">Worked on project from prototype to release, and major live-service updates for character systems and guilds</li>
+                                    <li id="billiards-ui-role">UI/UX content development - Used NGUI</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-billiards">February 2015 - May 2016</span></div>
                     </div>
@@ -258,7 +288,7 @@
             </section>
             <hr class="m-0">
             <!-- Education-->
-<!--            <section class="resume-section" id="education">
+            <!--            <section class="resume-section" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5" id="education-heading">Education</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="education-entry-1">
@@ -357,7 +387,8 @@
                     <ul id="documentary-list" class="fa-ul mb-0">
                         <li id="documentary-item-1">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/7q60bf0XTaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="documentary-video-1"></iframe>
-                            <br><br>
+                            <br>
+                            <br>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlw_9--RPkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="documentary-video-2"></iframe>
                         </li>
                     </ul>
@@ -371,8 +402,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="/js/scripts.js"></script>
-		<!--Iconify-->
-		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <!--Iconify-->
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     
 
 </body></html>
