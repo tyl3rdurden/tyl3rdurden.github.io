@@ -84,11 +84,31 @@
                   align-items: center;
               }
 
+              .core-focus {
+                  color: #495057;
+                  font-weight: 700;
+                  line-height: 1.5;
+              }
+
+              .skill-groups {
+                  display: grid;
+                  gap: 1.5rem;
+              }
+
+              .skill-group-title {
+                  margin-bottom: 0.65rem;
+                  color: #6c757d;
+                  font-size: 0.85rem;
+                  font-weight: 800;
+                  letter-spacing: 0;
+                  text-transform: uppercase;
+              }
+
               .skill-chip-list {
                   display: flex;
                   flex-wrap: wrap;
                   gap: 0.75rem;
-                  margin-bottom: 1.5rem;
+                  margin-bottom: 0;
                   padding-left: 0;
                   list-style: none;
               }
@@ -123,15 +143,11 @@
               }
 
               .about-skills {
-                  margin-top: 3rem;
+                  margin-top: 2.5rem;
               }
 
               .about-skills h2 {
                   font-size: 2.5rem;
-              }
-
-              .about-skills .dev-icons {
-                  margin-bottom: 1.5rem;
               }
 
           </style>
@@ -148,10 +164,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                       <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>-->
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular">Extra Curricular</a></li>
                       <li class="nav-item d-lg-none mt-3 text-center"><a class="nav-link lang-toggle" data-lang-link="alternate" href="/"><i class="fas fa-globe mr-1"></i><span>한국어</span></a></li>
@@ -168,14 +184,15 @@
                               <span id="first-name">이</span>
                               <span class="text-primary" id="last-name">준렬</span>
                           </h1>
-                          <div class="subheading mb-5" id="status">
+                          <div class="subheading mb-4" id="status">
                               <span id="status-info">U.S. Permanent Resident – No visa sponsorship required</span>
                           </div>
-                          <div class="subheading mb-5" id="contact-info">
+                          <p class="core-focus mb-4" id="core-focus">Unity Client Engineering · Live Service Games · UI/UX Systems · Tools · Performance</p>
+                          <div class="subheading mb-4" id="contact-info">
                               <span id="phone-address">(010) 4511-3287 · 서울시 구로구 신도림동 419-4</span>
                           						<p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                           </div>
-                          <div class="lead mb-5" id="personal-statement">
+                          <div class="lead mb-4" id="personal-statement">
                           						<span id="statement-line1">클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것</span>
                           						<br><span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
       					</div>
@@ -185,49 +202,68 @@
                       </div>
                       <div class="about-skills" id="skills">
                           <h2 class="mb-4" id="skills-heading">Skills</h2>
-                          <div class="subheading mb-3" id="programming-languages-subheading">Programming Languages & Tools</div>
-                          <ul class="skill-chip-list">
-                              <li class="skill-chip">
-                                  <i class="devicon-csharp-plain"></i>
-                                  <span>C#</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <i class="devicon-java-plain-wordmark"></i>
-                                  <span>Java</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <i class="devicon-c-plain"></i>
-                                  <span>C</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:perforce" data-inline="false"></span>
-                                  <span>Perforce</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
-                                  <span>Git</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
-                                  <span>SVN</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
-                                  <span>Jenkins</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:teamcity" data-inline="false"></span>
-                                  <span>TeamCity</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
-                                  <span>Unity</span>
-                              </li>
-                              <li class="skill-chip">
-                                  <span class="iconify" data-icon="simple-icons:unrealengine" data-inline="false"></span>
-                                  <span>Unreal Engine</span>
-                              </li>
-                          </ul>
+                          <div class="skill-groups mb-4">
+                              <div class="skill-group">
+                                  <div class="skill-group-title">Languages</div>
+                                  <ul class="skill-chip-list">
+                                      <li class="skill-chip">
+                                          <i class="devicon-csharp-plain"></i>
+                                          <span>C#</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <i class="devicon-c-plain"></i>
+                                          <span>C</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <i class="devicon-java-plain-wordmark"></i>
+                                          <span>Java</span>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="skill-group">
+                                  <div class="skill-group-title">Engines</div>
+                                  <ul class="skill-chip-list">
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
+                                          <span>Unity</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:unrealengine" data-inline="false"></span>
+                                          <span>Unreal Engine</span>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="skill-group">
+                                  <div class="skill-group-title">Source Control</div>
+                                  <ul class="skill-chip-list">
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
+                                          <span>Git</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:perforce" data-inline="false"></span>
+                                          <span>Perforce</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
+                                          <span>SVN</span>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="skill-group">
+                                  <div class="skill-group-title">Build & CI</div>
+                                  <ul class="skill-chip-list">
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
+                                          <span>Jenkins</span>
+                                      </li>
+                                      <li class="skill-chip">
+                                          <span class="iconify" data-icon="simple-icons:teamcity" data-inline="false"></span>
+                                          <span>TeamCity</span>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
                           <div class="subheading mb-3" id="workflow-subheading">Workflow</div>
                           <ul id="workflow-details" class="fa-ul mb-0">
                               <li id="workflow-requirements">

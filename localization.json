@@ -6,6 +6,7 @@
     "last-name": "Lee",
     "phone-address": "(443) 324-1161 · Baltimore, USA",
     "email-link": "jrl1103@gmail.com",
+    "core-focus": "Unity Client Engineering · Live Service Games · UI/UX Systems · Tools · Performance",
     "statement-line1": "Senior Unity client engineer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.",
     "statement-line2": "",
 
@@ -15,8 +16,8 @@
     "project-title-nexon": "Blue Archive",
     "tech-stack-nexon": "- Unity",
     "period-nexon": "May 2024 - April 2026",
-    "ba-1": "Optimized runtime data handling by converting JSON to a binary format (MemoryPack), reducing memory usage by over 80% and improving CPU performance by 70%",
-    "ba-11": "Implemented BattlePass",
+    "ba-1": "Reduced runtime memory usage by over 80% and improved CPU performance by 70% by converting JSON data to MemoryPack binary format",
+    "ba-11": "Built Battle Pass live-service feature for Blue Archive",
     "ba-2": "Implemented seasonal content, including a railroad placement mini-game",
     "ba-3": "Deputy Team Manager: mentored junior programmers, conducted code reviews, delegated tasks, and led regular check-ins",
 
@@ -24,8 +25,8 @@
     "company-minlab": "5minlab",
     "project-title-openworld": "Unreleased Open World Action RPG",
     "tech-stack-openworld": "- Unreal 5",
-    "openworld-gas": "Implemented Gameplay Ability System (GAS)",
-    "openworld-blueprint": "Developed a system enabling designers to create various buffs using blueprints without programmer assistance",
+    "openworld-gas": "Implemented core combat abilities with Unreal Gameplay Ability System (GAS)",
+    "openworld-blueprint": "Enabled designers to create buffs in Blueprint without programmer support",
     "project-title-action-rpg": "Unreleased Action RPG",
     "tech-stack-action-rpg": "- Unity",
     "action-rpg-prototype": "Led rapid prototyping as the sole programmer",
@@ -84,7 +85,7 @@
 
     "portfolio-heading": "Portfolio",
     "portfolio-title-hexgem": "HexGem",
-    "portfolio-description-hexgem": "Portfolio project of a classic simple brush style 3 match game",
+    "portfolio-description-hexgem": "Classic match-3 portfolio project focused on simple brush-style interaction and readable gameplay feedback",
 
     "education-heading": "Education",
     "education-umd-title": "University of Maryland College-Park",
@@ -116,6 +117,7 @@
     "last-name": "준렬",
     "phone-address": "(010) 4511-3287 · 서울시 구로구 신도림동 419-4",
     "email-link": "jrl1103@gmail.com",
+    "core-focus": "Unity 클라이언트 엔지니어링 · 라이브 서비스 게임 · UI/UX 시스템 · 툴 개발 · 성능 최적화",
     "statement-line1": "클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것",
     "statement-line2": "효율성, 편리성, 협동, 소통을 우선시하는 프로그래머",
 

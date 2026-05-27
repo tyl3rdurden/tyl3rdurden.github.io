@@ -83,11 +83,31 @@
                 align-items: center;
             }
 
+            .core-focus {
+                color: #495057;
+                font-weight: 700;
+                line-height: 1.5;
+            }
+
+            .skill-groups {
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            .skill-group-title {
+                margin-bottom: 0.65rem;
+                color: #6c757d;
+                font-size: 0.85rem;
+                font-weight: 800;
+                letter-spacing: 0;
+                text-transform: uppercase;
+            }
+
             .skill-chip-list {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.75rem;
-                margin-bottom: 1.5rem;
+                margin-bottom: 0;
                 padding-left: 0;
                 list-style: none;
             }
@@ -122,15 +142,11 @@
             }
 
             .about-skills {
-                margin-top: 3rem;
+                margin-top: 2.5rem;
             }
 
             .about-skills h2 {
                 font-size: 2.5rem;
-            }
-
-            .about-skills .dev-icons {
-                margin-bottom: 1.5rem;
             }
         </style>
     </head>
@@ -149,10 +165,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>-->
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular">Extra Curricular</a></li>
                     <li class="nav-item d-lg-none mt-3 text-center">
@@ -174,14 +190,15 @@
                             <span id="first-name">Joon Ryul (JR)</span>
                             <span class="text-primary" id="last-name">Lee</span>
                         </h1>
-                        <div class="subheading mb-5" id="status">
+                        <div class="subheading mb-4" id="status">
                             <span id="status-info">U.S. Permanent Resident – No visa sponsorship required</span>
                         </div>
-                        <div class="subheading mb-5" id="contact-info">
+                        <p class="core-focus mb-4" id="core-focus">Unity Client Engineering · Live Service Games · UI/UX Systems · Tools · Performance</p>
+                        <div class="subheading mb-4" id="contact-info">
                             <span id="phone-address">(443) 324-1161 · Baltimore, USA</span>
                             <p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                         </div>
-                        <div class="lead mb-5" id="personal-statement">
+                        <div class="lead mb-4" id="personal-statement">
                             <span id="statement-line1">Senior Unity client engineer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.</span>
                             <br>
                             <span id="statement-line2"></span>
@@ -192,49 +209,68 @@
                     </div>
                     <div class="about-skills" id="skills">
                         <h2 class="mb-4" id="skills-heading">Skills</h2>
-                        <div class="subheading mb-3" id="programming-languages-subheading">Programming Languages &amp; Tools</div>
-                        <ul class="skill-chip-list">
-                            <li class="skill-chip">
-                                <i class="devicon-csharp-plain"></i>
-                                <span>C#</span>
-                            </li>
-                            <li class="skill-chip">
-                                <i class="devicon-java-plain-wordmark"></i>
-                                <span>Java</span>
-                            </li>
-                            <li class="skill-chip">
-                                <i class="devicon-c-plain"></i>
-                                <span>C</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:perforce" data-inline="false"></span>
-                                <span>Perforce</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
-                                <span>Git</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
-                                <span>SVN</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
-                                <span>Jenkins</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:teamcity" data-inline="false"></span>
-                                <span>TeamCity</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
-                                <span>Unity</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="iconify" data-icon="simple-icons:unrealengine" data-inline="false"></span>
-                                <span>Unreal Engine</span>
-                            </li>
-                        </ul>
+                        <div class="skill-groups mb-4">
+                            <div class="skill-group">
+                                <div class="skill-group-title">Languages</div>
+                                <ul class="skill-chip-list">
+                                    <li class="skill-chip">
+                                        <i class="devicon-csharp-plain"></i>
+                                        <span>C#</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <i class="devicon-c-plain"></i>
+                                        <span>C</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <i class="devicon-java-plain-wordmark"></i>
+                                        <span>Java</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-group-title">Engines</div>
+                                <ul class="skill-chip-list">
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
+                                        <span>Unity</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:unrealengine" data-inline="false"></span>
+                                        <span>Unreal Engine</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-group-title">Source Control</div>
+                                <ul class="skill-chip-list">
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
+                                        <span>Git</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:perforce" data-inline="false"></span>
+                                        <span>Perforce</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="file-icons:svn" data-inline="false"></span>
+                                        <span>SVN</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-group-title">Build &amp; CI</div>
+                                <ul class="skill-chip-list">
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
+                                        <span>Jenkins</span>
+                                    </li>
+                                    <li class="skill-chip">
+                                        <span class="iconify" data-icon="simple-icons:teamcity" data-inline="false"></span>
+                                        <span>TeamCity</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="subheading mb-3" id="workflow-subheading">Workflow</div>
                         <ul id="workflow-details" class="fa-ul mb-0">
                             <li id="workflow-requirements">
@@ -266,8 +302,8 @@
                                 <a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">Blue Archive</b></a>
                                 <span id="tech-stack-nexon">- Unity</span>
                                 <ul id="ba-project-details">
-                                    <li id="ba-1">Optimized runtime data handling by converting JSON to a binary format (MemoryPack), reducing memory usage by over 80% and improving CPU performance by 70%</li>
-                                    <li id="ba-11">Implemented BattlePass</li>
+                                    <li id="ba-1">Reduced runtime memory usage by over 80% and improved CPU performance by 70% by converting JSON data to MemoryPack binary format</li>
+                                    <li id="ba-11">Built Battle Pass live-service feature for Blue Archive</li>
                                     <li id="ba-2">
                                         Implemented seasonal content, including a railroad placement mini-game
                                         <ul>
@@ -288,8 +324,8 @@
                                 <a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ" id="project-link-openworld"><b id="project-title-openworld">Unreleased Open World Action RPG</b></a>
                                 <span id="tech-stack-openworld">- Unreal 5</span>
                                 <ul id="openworld-project-details">
-                                    <li id="openworld-gas">Implemented Gameplay Ability System (GAS)</li>
-                                    <li id="openworld-blueprint">Developed a system enabling designers to create various buffs using blueprints without programmer assistance</li>
+                                    <li id="openworld-gas">Implemented core combat abilities with Unreal Gameplay Ability System (GAS)</li>
+                                    <li id="openworld-blueprint">Enabled designers to create buffs in Blueprint without programmer support</li>
                                 </ul>
                             </div>
                             <div id="project-action-rpg">
@@ -385,7 +421,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="portfolio-item-hexgem">
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="portfolio-title-hexgem"><a href="https://github.com/tyl3rdurden/HexGem" id="portfolio-link-hexgem">HexGem</a></h3>
-                            <div id="portfolio-description-hexgem">Portfolio project of a classic simple brush style 3 match game</div>
+                            <div id="portfolio-description-hexgem">Classic match-3 portfolio project focused on simple brush-style interaction and readable gameplay feedback</div>
                             <p id="portfolio-content-hexgem"></p>
                             <img src="https://i.imgur.com/ZfUgPO0.gif" id="portfolio-image-hexgem">
                         </div>

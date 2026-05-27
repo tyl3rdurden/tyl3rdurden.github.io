@@ -11,7 +11,7 @@ section.resume-section {
     }
 }
 @include media-breakpoint-up(md) {
-    section.resume-section {
+    section.resume-section#about {
         min-height: 100vh;
     }
 }

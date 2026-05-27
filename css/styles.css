@@ -10100,7 +10100,7 @@ section.resume-section .resume-section-content {
 }
 
 @media (min-width: 768px) {
-  section.resume-section {
+  section.resume-section#about {
     min-height: 100vh;
   }
 }
