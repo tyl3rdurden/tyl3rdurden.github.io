@@ -134,6 +134,20 @@
                 flex: 0 0 auto;
             }
 
+            .about-actions {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .resume-download {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                text-decoration: none;
+            }
+
             /* Simple left border for work authorization status */
             #status-info {
                 border-left: 4px solid #bd7638;
@@ -195,16 +209,22 @@
                         </div>
                         <p class="core-focus mb-4" id="core-focus">Unity Client Engineering · Live Service Games · UI/UX Systems · Tools · Performance</p>
                         <div class="subheading mb-4" id="contact-info">
-                            <span id="phone-address">(443) 324-1161 · Baltimore, USA</span>
+                            <span id="phone-address">(443) 324-1161 · Baltimore, Maryland</span>
                             <p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                         </div>
                         <div class="lead mb-4" id="personal-statement">
-                            <span id="statement-line1">Senior Unity client engineer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.</span>
+                            <span id="statement-line1">Senior Unity programmer with 6+ years of experience building and supporting mobile live service games. Focused on UI, gameplay systems, performance optimization, and custom tools that speed up iteration for designers and artists.</span>
                             <br>
                             <span id="statement-line2"></span>
                         </div>
-                        <div class="social-icons" id="social-links">
-                            <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                        <div class="about-actions">
+                            <div class="social-icons" id="social-links">
+                                <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                            </div>
+                            <a class="btn btn-primary resume-download" href="/assets/Joon_Ryul_Lee_Resume.pdf" download="Joon_Ryul_Lee_Resume.pdf">
+                                <i class="fas fa-download"></i>
+                                <span id="download-resume-link">Download Resume</span>
+                            </a>
                         </div>
                     </div>
                     <div class="about-skills" id="skills">
@@ -218,8 +238,8 @@
                                         <span>C#</span>
                                     </li>
                                     <li class="skill-chip">
-                                        <i class="devicon-c-plain"></i>
-                                        <span>C</span>
+                                        <i class="devicon-cplusplus-plain"></i>
+                                        <span>C++</span>
                                     </li>
                                     <li class="skill-chip">
                                         <i class="devicon-java-plain-wordmark"></i>
@@ -296,7 +316,7 @@
                     <h2 class="mb-5" id="experience-heading">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-nexon">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-nexon">Client Programmer &amp; Deputy Team Manager</h3>
+                            <h3 class="mb-0" id="job-title-nexon">Unity Programmer &amp; Deputy Team Manager</h3>
                             <div class="subheading mb-3" id="company-nexon">Nexon Games</div>
                             <div id="project-nexon">
                                 <a href="https://bluearchive.nexon.com/home" id="project-link-nexon"><b id="project-title-nexon">Blue Archive</b></a>
@@ -318,7 +338,7 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-minlab">Client Programmer</h3>
+                            <h3 class="mb-0" id="job-title-minlab">Game Programmer</h3>
                             <div class="subheading mb-3" id="company-minlab">5minlab</div>
                             <div id="project-openworld">
                                 <a href="https://www.youtube.com/watch?v=ErjxwLDKdkQ" id="project-link-openworld"><b id="project-title-openworld">Unreleased Open World Action RPG</b></a>
@@ -350,7 +370,7 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-wgames">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-wgames">Unity Client Programmer</h3>
+                            <h3 class="mb-0" id="job-title-wgames">Unity Programmer</h3>
                             <div class="subheading mb-3" id="company-wgames">DoubleU Games</div>
                             <div id="project-undead">
                                 <a href="https://play.google.com/store/apps/details?id=com.doubledown.undead.world.hero.afk.game&amp;hl=en&amp;gl=US" id="project-link-undead"><b id="project-title-undead">Undead World</b></a>
@@ -365,7 +385,7 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab-smash">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-minlab-smash">Unity Client Programmer</h3>
+                            <h3 class="mb-0" id="job-title-minlab-smash">Game Programmer</h3>
                             <div class="subheading mb-3" id="company-minlab-smash">5minlab</div>
                             <div id="project-smash">
                                 <a href="https://store.steampowered.com/app/1352080/SMASH_LEGENDS/" id="project-link-smash"><b id="project-title-smash">Smash Legends</b></a>
@@ -381,7 +401,7 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-hero60">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-andromeda-hero60">Unity Client Programmer</h3>
+                            <h3 class="mb-0" id="job-title-andromeda-hero60">Unity Programmer</h3>
                             <div class="subheading mb-3" id="company-andromeda-hero60">Andromeda Games</div>
                             <div id="project-hero60">
                                 <a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&amp;hl=ko" id="project-link-hero60"><b id="project-title-hero60">60 Second Hero</b></a>
@@ -398,7 +418,7 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-billiards">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0" id="job-title-andromeda-billiards">Unity Client Programmer</h3>
+                            <h3 class="mb-0" id="job-title-andromeda-billiards">Unity Programmer</h3>
                             <div class="subheading mb-3" id="company-andromeda-billiards">Andromeda Games</div>
                             <div id="project-billiards">
                                 <a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&amp;hl=ko" id="project-link-billiards"><b id="project-title-billiards">God of Billiards</b></a>

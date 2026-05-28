@@ -136,6 +136,20 @@
                 flex: 0 0 auto;
             }
 
+            .about-actions {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .resume-download {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                text-decoration: none;
+            }
+
             /* Simple left border for work authorization status */
             #status-info {
                 border-left: 4px solid #bd7638;
@@ -205,8 +219,14 @@
                             <br />
                             <span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
                         </div>
-                        <div class="social-icons" id="social-links">
-                            <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                        <div class="about-actions">
+                            <div class="social-icons" id="social-links">
+                                <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                            </div>
+                            <a class="btn btn-primary resume-download" href="/assets/Joon_Ryul_Lee_Resume.pdf" download="Joon_Ryul_Lee_Resume.pdf">
+                                <i class="fas fa-download"></i>
+                                <span id="download-resume-link">Download Resume</span>
+                            </a>
                         </div>
                     </div>
                     <div class="about-skills" id="skills">
@@ -220,8 +240,8 @@
                                         <span>C#</span>
                                     </li>
                                     <li class="skill-chip">
-                                        <i class="devicon-c-plain"></i>
-                                        <span>C</span>
+                                        <i class="devicon-cplusplus-plain"></i>
+                                        <span>C++</span>
                                     </li>
                                     <li class="skill-chip">
                                         <i class="devicon-java-plain-wordmark"></i>
