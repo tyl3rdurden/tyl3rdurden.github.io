@@ -93,14 +93,7 @@
     "workflow-requirements": "Gather requirements",
     "workflow-communication": "Communicate with various cooperating/involved co-workers (Designer, Manager, Artist, QA etc.)",
     "workflow-planning": "Plan first, code second",
-    "workflow-agile": "Agile Development & Scrum",
-
-    "interests-heading": "Interests",
-    "interests-paragraph-1": "I'm a game developer first but I enjoy spending my time experiencing various story telling mediums such as games, TV shows, movies, and anime. I love being part of the ride involving great story telling and the feeling of having my jaw drop and just sitting in awe after the credits roll is one of the greatest pleasures I can have. Just being able to truly enjoy and be part of the moment is something I really value and hope I can integrate in my games.",
-    "interests-paragraph-2": "I also enjoy spending too much time on reddit and enjoy anything from cat pictures to the latest programming advancements or discussions on the implementation of a game feature.",
-
-    "extracurricular-heading": "Extra Curriculars",
-    "extracurricular-paragraph": "I've always been interested in story telling and the passion people have. Whether it be creating a work of art that can only come together through the passion of everyone involved or people being involved in an intense esports scene, the passion and fun they had was always something that inspired me. It has been over 10 years ago since I've captured those moments but these documentaries are something I'm still proud of and feel inspired by on rewatches."
+    "workflow-agile": "Agile Development & Scrum"
   },
   "ko": {
     "page-title": "이준렬 - 이력서",
