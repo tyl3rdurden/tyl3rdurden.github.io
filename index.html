@@ -5,6 +5,13 @@
         <meta name="author" content="">
         <title id="page-title">Joon Ryul Lee - Resume</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-alt2.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-railroad.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-gameplay.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-alt1.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/blue-archive.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/openworld-rpg.jpg">
+        <link rel="preload" as="image" href="/assets/img/projects/dinkum-mobile.webp">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -24,7 +31,7 @@
             .lang-toggle:active,
             .lang-toggle:focus {
                 color: #fff;
-                border-left: 0.25rem solid #bd5d38;
+                border-left: 0.25rem solid #88bdbc;
             }
             .lang-toggle i {
                 font-size: 0.85rem;
@@ -43,7 +50,7 @@
             }
             .lang-toggle-top:hover {
                 color: #fff;
-                background-color: rgba(189, 93, 56, 0.4);
+                background-color: rgba(136, 189, 188, 0.4);
                 text-decoration: none;
             }
             .lang-toggle-top i {
@@ -154,7 +161,7 @@
 
             /* Simple left border for work authorization status */
             #status-info {
-                border-left: 4px solid #bd7638;
+                border-left: 4px solid #88bdbc;
                 padding-left: 10px;
                 font-weight: 500;
             }
@@ -341,34 +348,41 @@
                         <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - April 2026</span></div>
                         <aside class="experience-media" aria-label="Blue Archive media carousel">
                             <div id="carousel-nexon" class="carousel slide experience-carousel" data-ride="carousel" data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-nexon" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-nexon" data-slide-to="1"></li>
+                                    <li data-target="#carousel-nexon" data-slide-to="2"></li>
+                                    <li data-target="#carousel-nexon" data-slide-to="3"></li>
+                                    <li data-target="#carousel-nexon" data-slide-to="4"></li>
+                                </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-alt2.jpg" alt="Blue Archive tactical battle screenshot">
+                                            <img src="/assets/img/projects/blue-archive-alt2.jpg" alt="Blue Archive tactical battle screenshot" loading="eager" decoding="async" fetchpriority="high">
                                             <span class="experience-media-chip">Blue Archive</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-railroad.jpg" alt="Blue Archive railroad mini-game video thumbnail">
+                                            <img src="/assets/img/projects/blue-archive-railroad.jpg" alt="Blue Archive railroad mini-game video thumbnail" loading="eager" decoding="async">
                                             <span class="experience-media-chip">Seasonal Content</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-gameplay.jpg" alt="Blue Archive cafe feature screenshot">
+                                            <img src="/assets/img/projects/blue-archive-gameplay.jpg" alt="Blue Archive cafe feature screenshot" loading="eager" decoding="async">
                                             <span class="experience-media-chip">Cafe Systems</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-alt1.jpg" alt="Blue Archive story selection screenshot">
+                                            <img src="/assets/img/projects/blue-archive-alt1.jpg" alt="Blue Archive story selection screenshot" loading="eager" decoding="async">
                                             <span class="experience-media-chip">Story UI</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive.jpg" alt="Blue Archive character scene screenshot">
+                                            <img src="/assets/img/projects/blue-archive.jpg" alt="Blue Archive character scene screenshot" loading="eager" decoding="async">
                                             <span class="experience-media-chip">Kivotos</span>
                                         </div>
                                     </div>
@@ -421,16 +435,20 @@
                         <div class="flex-shrink-0"><span class="text-primary" id="period-minlab">May 2023 - May 2024</span></div>
                         <aside class="experience-media" aria-label="5minlab projects media carousel">
                             <div id="carousel-minlab" class="carousel slide experience-carousel" data-ride="carousel" data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-minlab" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-minlab" data-slide-to="1"></li>
+                                </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/openworld-rpg.jpg" alt="Unreleased open world action RPG prototype thumbnail">
+                                            <img src="/assets/img/projects/openworld-rpg.jpg" alt="Unreleased open world action RPG prototype thumbnail" loading="eager" decoding="async" fetchpriority="high">
                                             <span class="experience-media-chip">Open World RPG</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/dinkum-mobile.webp" alt="Dinkum Mobile gameplay screenshot">
+                                            <img src="/assets/img/projects/dinkum-mobile.webp" alt="Dinkum Mobile gameplay screenshot" loading="eager" decoding="async">
                                             <span class="experience-media-chip">Dinkum Mobile</span>
                                         </div>
                                     </div>

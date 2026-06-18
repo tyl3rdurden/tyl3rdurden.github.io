@@ -12,8 +12,8 @@ section.resume-section {
 }
 
 .experience-media {
-    flex: 0 0 22rem;
-    width: 22rem;
+    flex: 0 0 26rem;
+    width: 26rem;
     margin: 0.35rem 1.5rem 0;
 }
 
@@ -51,24 +51,71 @@ section.resume-section {
     overflow: hidden;
 }
 
-.experience-carousel .carousel-control-prev,
-.experience-carousel .carousel-control-next {
-    width: 2.35rem;
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out;
+.experience-carousel .carousel-item {
+    transition-duration: 0.2s;
 }
 
-.experience-carousel:hover .carousel-control-prev,
-.experience-carousel:hover .carousel-control-next,
-.experience-carousel:focus-within .carousel-control-prev,
-.experience-carousel:focus-within .carousel-control-next {
-    opacity: 0.85;
+.experience-carousel .carousel-control-prev,
+.experience-carousel .carousel-control-next {
+    width: 3.15rem;
+    opacity: 0.92;
+    transition: opacity 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.experience-carousel .carousel-control-prev {
+    background: linear-gradient(90deg, rgba($gray-900, 0.52), rgba($gray-900, 0));
+}
+
+.experience-carousel .carousel-control-next {
+    background: linear-gradient(270deg, rgba($gray-900, 0.52), rgba($gray-900, 0));
+}
+
+.experience-carousel .carousel-control-prev:hover,
+.experience-carousel .carousel-control-next:hover,
+.experience-carousel .carousel-control-prev:focus,
+.experience-carousel .carousel-control-next:focus {
+    opacity: 1;
 }
 
 .experience-carousel .carousel-control-prev-icon,
 .experience-carousel .carousel-control-next-icon {
-    width: 1.15rem;
-    height: 1.15rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba($gray-900, 0.72);
+    background-size: 56%;
+}
+
+.experience-carousel .carousel-indicators {
+    right: 0.8rem;
+    bottom: 0.72rem;
+    left: auto;
+    z-index: 5;
+    justify-content: flex-end;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.experience-carousel .carousel-indicators li {
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-right: 0.16rem;
+    margin-left: 0.16rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba($white, 0.58);
+    opacity: 1;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.experience-carousel .carousel-indicators .active {
+    width: 1rem;
+    border-radius: 999px;
+    background-color: $white;
 }
 
 .experience-media-chip {
@@ -150,15 +197,15 @@ section.resume-section {
     }
 
     .experience-media {
-        flex-basis: 26rem;
-        width: 26rem;
+        flex-basis: 32rem;
+        width: 32rem;
         margin-left: 2rem;
     }
 }
 
 @include media-breakpoint-up(xl) {
     .experience-media {
-        flex-basis: 28rem;
-        width: 28rem;
+        flex-basis: 34rem;
+        width: 34rem;
     }
 }
