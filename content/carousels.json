@@ -1,0 +1,178 @@
+{
+    "nexon": {
+        "id": "carousel-nexon",
+        "ariaLabel": "Blue Archive media carousel",
+        "previousLabel": "Previous Blue Archive image",
+        "nextLabel": "Next Blue Archive image",
+        "slides": [
+			{
+                "image": "blue-archive-combat1.JPG",
+                "alt": "Blue Archive Combat",
+                "label": "Combat"
+            },
+			{
+                "image": "blue-archive-minigame-railroad.jpg",
+                "alt": "Blue Archive railroad mini-game",
+                "label": "Seasonal Content"
+            },
+			{
+                "image": "blue-archive-credits.png",
+                "alt": "Blue Archive Credits",
+                "label": "Credits Listing"
+            },
+
+			{
+                "image": "blue-archive-combat2.JPG",
+                "alt": "Blue Archive Combat2",
+                "label": "Combat Skill selection"
+            },
+            {
+                "image": "blue-archive-dialogue.JPG",
+                "alt": "Blue Archive story screenshot",
+                "label": "Dialogue"
+            },
+            {
+                "image": "blue-archive-main-menu.JPG",
+                "alt": "Blue Archive main menu",
+                "label": "Main Menu"
+            },
+			{
+                "image": "blue-archive-menu.JPG",
+                "alt": "Blue Archive menu",
+                "label": "Character Selection"
+            }
+        ],
+        "links": [
+            {
+                "label": "Store",
+                "url": "https://store.steampowered.com/app/3557620/Blue_Archive/"
+            }
+        ]
+    },
+    "minlab": {
+        "id": "carousel-minlab",
+        "ariaLabel": "5minlab projects media carousel",
+        "previousLabel": "Previous 5minlab image",
+        "nextLabel": "Next 5minlab image",
+        "slides": [
+            {
+                "image": "isegye.JPG",
+                "alt": "Unreleased open world action RPG prototype",
+                "label": "Open World RPG"
+            },
+            {
+                "image": "dinkum-mobile.webp",
+                "alt": "Dinkum Mobile gameplay",
+                "label": "Dinkum Mobile"
+            }
+        ],
+        "links": [
+            {
+                "label": "Video",
+                "url": "https://www.youtube.com/watch?v=ErjxwLDKdkQ"
+            }
+        ]
+    },
+    "wgames": {
+        "id": "carousel-undead-world",
+        "ariaLabel": "Undead World media carousel",
+        "previousLabel": "Previous Undead World image",
+        "nextLabel": "Next Undead World image",
+        "slides": [
+            {
+                "image": "undead.JPG",
+                "alt": "Undead World zombie battle",
+                "label": "Combat"
+            },
+            {
+                "image": "undead3.JPG",
+                "alt": "Undead World zombie battle",
+                "label": "Character Selection"
+            },
+            {
+                "image": "undead2.JPG",
+                "alt": "Undead World zombie battle",
+                "label": "Menu"
+            }
+        ],
+        "links": [
+            {
+                "label": "Website",
+                "url": "https://undeadworld-herosurvival.com/"
+            }
+        ]
+    },
+    "smash": {
+        "id": "carousel-smash",
+        "ariaLabel": "Smash Legends media carousel",
+        "previousLabel": "Previous Smash Legends image",
+        "nextLabel": "Next Smash Legends image",
+        "slides": [
+            {
+                "image": "smash-legends.webp",
+                "alt": "Smash Legends Dominion mode battle",
+                "label": "Gameplay"
+            },
+            {
+                "image": "sl.JPG",
+                "alt": "Smash Legends duel gameplay",
+                "label": "Duel"
+            },
+            {
+                "image": "sl2.JPG",
+                "alt": "Smash Legends character selection screen",
+                "label": "Character Selection"
+            }
+        ],
+        "links": [
+            {
+                "label": "Store",
+                "url": "https://store.steampowered.com/app/1352080/SMASH_LEGENDS/"
+            }
+        ]
+    },
+    "hero60": {
+        "ariaLabel": "60 Second Hero media",
+        "slides": [
+            {
+                "image": "hero.JPG",
+                "alt": "60 Second Hero gameplay screenshot",
+                "label": "Gameplay",
+                "fit": "contain"
+            }
+        ],
+        "links": []
+    },
+    "billiards": {
+        "id": "carousel-billiards",
+        "ariaLabel": "God of Billiards media carousel",
+        "previousLabel": "Previous God of Billiards image",
+        "nextLabel": "Next God of Billiards image",
+        "slides": [
+            {
+                "image": "billiard-gameplay.jpg",
+                "alt": "God of Billiards gameplay screenshot",
+                "label": "Gameplay",
+                "fit": "contain"
+            },
+			{
+                "image": "billiard-main-menu.JPG",
+                "alt": "God of Billiards gameplay screenshot",
+                "label": "Main Menu",
+                "fit": "contain"
+            },
+			{
+                "image": "billiard-inventory.JPG",
+                "alt": "God of Billiards gameplay screenshot",
+                "label": "Inventory",
+                "fit": "contain"
+            }
+        ],
+        "links": [
+            {
+                "label": "Store",
+                "url": "https://play.google.com/store/apps/details?hl=ko&id=com.andromedagames.billiardsgod"
+            }
+        ]
+    }
+}

@@ -13321,9 +13321,14 @@ section.resume-section .resume-section-content {
 }
 
 .experience-media {
-  flex: 0 0 26rem;
-  width: 26rem;
-  margin: 0.35rem 1.5rem 0;
+  flex: 0 0 auto;
+  width: 34rem;
+  max-width: 100%;
+  margin: 0.75rem 0 0;
+}
+
+#experience .resume-section-content > .d-flex {
+  flex-direction: column !important;
 }
 
 .experience-media-thumb {
@@ -13346,6 +13351,15 @@ section.resume-section .resume-section-content {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.experience-carousel .experience-media-thumb img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.experience-media-thumb img {
+  cursor: zoom-in;
 }
 
 .experience-media-thumb.is-contain img {
@@ -13374,11 +13388,11 @@ section.resume-section .resume-section-content {
 }
 
 .experience-carousel .carousel-control-prev {
-  background: linear-gradient(90deg, rgba(33, 37, 41, 0.52), rgba(33, 37, 41, 0));
+  background: none;
 }
 
 .experience-carousel .carousel-control-next {
-  background: linear-gradient(270deg, rgba(33, 37, 41, 0.52), rgba(33, 37, 41, 0));
+  background: none;
 }
 
 .experience-carousel .carousel-control-prev:hover,
@@ -13476,6 +13490,92 @@ section.resume-section .resume-section-content {
   text-decoration: none;
 }
 
+.experience-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem 2rem;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.experience-lightbox[hidden] {
+  display: none;
+}
+
+.experience-lightbox-image {
+  display: block;
+  max-width: 94vw;
+  max-height: 88vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.experience-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.experience-lightbox-close:hover,
+.experience-lightbox-close:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.experience-lightbox-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.experience-lightbox-nav[hidden] {
+  display: none;
+}
+
+.experience-lightbox-prev {
+  left: 1rem;
+}
+
+.experience-lightbox-next {
+  right: 1rem;
+}
+
+.experience-lightbox-nav:hover,
+.experience-lightbox-nav:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+body.experience-lightbox-open {
+  overflow: hidden;
+}
+
 @media (max-width: 575.98px) {
   #experience .flex-shrink-0 {
     margin-top: 0.25rem;
@@ -13497,6 +13597,31 @@ section.resume-section .resume-section-content {
   section.resume-section#about {
     min-height: 100vh;
   }
+
+  #experience .resume-section-content > .d-flex {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  #experience .resume-section-content > .d-flex > .flex-grow-1 {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  #experience .resume-section-content > .d-flex > .flex-shrink-0 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+  }
+
+  #experience .resume-section-content > .d-flex > .experience-media {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
 }
 @media (min-width: 992px) {
   section.resume-section {
@@ -13504,17 +13629,5 @@ section.resume-section .resume-section-content {
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-
-  .experience-media {
-    flex-basis: 32rem;
-    width: 32rem;
-    margin-left: 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .experience-media {
-    flex-basis: 34rem;
-    width: 34rem;
   }
 }
