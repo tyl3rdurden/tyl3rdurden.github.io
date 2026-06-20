@@ -1,4 +1,4 @@
-﻿.
+.
   <!DOCTYPE html>
   <html lang="en">
       <head>
@@ -8,6 +8,7 @@
           <meta name="author" content="" />
           <title id="page-title">이준렬 - 이력서</title>
           <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+          !{carouselPreloads}
           <!-- Font Awesome icons (free version)-->
           <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
           <!-- Google fonts-->
@@ -15,8 +16,8 @@
           <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
           <!-- Core theme CSS (includes Bootstrap)-->
           <link href="/css/styles.css" rel="stylesheet" />
-  		<!-- DevIcon-->
-  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
+          <!-- DevIcon-->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
           <style>
               .lang-toggle {
                   text-transform: none;
@@ -25,7 +26,7 @@
               }
               .lang-toggle:hover, .lang-toggle:active, .lang-toggle:focus {
                   color: #fff;
-                  border-left: 0.25rem solid #bd5d38;
+                  border-left: 0.25rem solid #88bdbc;
               }
               .lang-toggle i {
                   font-size: 0.85rem;
@@ -44,7 +45,7 @@
               }
               .lang-toggle-top:hover {
                   color: #fff;
-                  background-color: rgba(189, 93, 56, 0.4);
+                  background-color: rgba(136, 189, 188, 0.4);
                   text-decoration: none;
               }
               .lang-toggle-top i {
@@ -155,7 +156,7 @@
 
               /* Simple left border for work authorization status */
               #status-info {
-                  border-left: 4px solid #bd7638;
+                  border-left: 4px solid #88bdbc;
                   padding-left: 10px;
                   font-weight: 500;
               }
@@ -206,11 +207,11 @@
                           <p class="core-focus mb-4" id="core-focus">Unity Client Engineering · Live Service Games · UI/UX Systems · Tools · Performance</p>
                           <div class="subheading mb-4" id="contact-info">
                               <span id="phone-address">(010) 4511-3287 · 서울시 구로구 신도림동 419-4</span>
-                          						<p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
+                                                  <p id="email-container"><a href="mailto:jrl1103@gmail.com" id="email-link">jrl1103@gmail.com</a></p>
                           </div>
                           <div class="lead mb-4" id="personal-statement">
-                          						<span id="statement-line1">클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것</span>
-                          						<br><span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
+                                                  <span id="statement-line1">클라이언트 프로그래머 - 게임은 혼자가 아닌 함께 개발하는 것</span>
+                                                  <br><span id="statement-line2">효율성, 편리성, 협동, 소통을 우선시하는 프로그래머</span>
                           </div>
                           <div class="about-actions">
                               <div class="social-icons" id="social-links">
@@ -325,7 +326,8 @@
                               </ul>
                           </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - 현재</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-nexon">May 2024 - 현재</span></div>
+                      !{renderedCarousels.nexon}
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab">
                           <div class="flex-grow-1">
@@ -351,7 +353,8 @@
                                   </ul>
                               </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-minlab">May 2023 - May 2024</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-minlab">May 2023 - May 2024</span></div>
+                      !{renderedCarousels.minlab}
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-wgames">
                           <div class="flex-grow-1">
@@ -364,7 +367,8 @@
                                   </ul>
                               </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-wgames">June 2022 - May 2023</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-wgames">June 2022 - May 2023</span></div>
+                      !{renderedCarousels.wgames}
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-minlab-smash">
                           <div class="flex-grow-1">
@@ -378,35 +382,38 @@
                                   </ul>
                               </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-minlab-smash">May 2021 - June 2022</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-minlab-smash">May 2021 - June 2022</span></div>
+                      !{renderedCarousels.smash}
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-hero60">
                           <div class="flex-grow-1">
                               <h3 class="mb-0" id="job-title-andromeda-hero60">유니티 클라이언트 프로그래머</h3>
                               <div class="subheading mb-3" id="company-andromeda-hero60">안드로메다게임즈</div>
-                      								<div id="project-hero60"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.hero60&hl=ko" id="project-link-hero60"><b id="project-title-hero60">60초 용사 출시</b></a> <span id="tech-stack-hero60">- 안드로이드</span>
-                      									<ul id="hero60-project-details">
-                      										<li id="hero60-dev-cycle">프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발</li>
-                      										<li id="hero60-unity-tools">원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작</li>
-                      										<li id="hero60-excel-vba">엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작</li>
-                      										<li id="hero60-ui-role">주로 UI/UX 담당, 서버와 정보 교류 - NGUI 사용</li>
-                      									</ul>
-                      								</div>
+                                                      <div id="project-hero60"><b id="project-title-hero60">60초 용사 출시</b> <span id="tech-stack-hero60">- 안드로이드</span>
+                                                          <ul id="hero60-project-details">
+                                                              <li id="hero60-dev-cycle">프로젝트 초기부터 출시까지 개발, 유지 보수 및 길드와 레이드 등의 대규모 업데이트 개발</li>
+                                                              <li id="hero60-unity-tools">원활한 테스팅 및 개발을 위한 유니티 에디터 툴 제작</li>
+                                                              <li id="hero60-excel-vba">엑셀 + VBA – 엑셀 시트들의 캐릭터, 장비, 스킬, 세트 버프 데이터 테이블들 토대로 게임에 매번 접속할 필요 없이 밸런싱이 가능토록 파티 조합을 쉽게 세팅하고 DPS 를 계산 할수 있는 통합 엑셀 시트 제작</li>
+                                                              <li id="hero60-ui-role">주로 UI/UX 담당, 서버와 정보 교류 - NGUI 사용</li>
+                                                          </ul>
+                                                      </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-hero60">May 2018 - February 2019</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-hero60">May 2018 - February 2019</span></div>
+                      !{renderedCarousels.hero60}
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="experience-andromeda-billiards">
                           <div class="flex-grow-1">
                               <h3 class="mb-0" id="job-title-andromeda-billiards">유니티 클라이언트 프로그래머</h3>
                               <div class="subheading mb-3" id="company-andromeda-billiards">안드로메다게임즈</div>
-                      								<div id="project-billiards"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&hl=ko" id="project-link-billiards"><b id="project-title-billiards">당구의 신 출시</b></a> <span id="tech-stack-billiards">- 안드로이드</span>
-                      									<ul id="billiards-project-details">
-                      										<li id="billiards-dev-cycle">프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발</li>
-                      										<li id="billiards-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
-                      									</ul>
-                      								</div>
+                                                      <div id="project-billiards"><a href="https://play.google.com/store/apps/details?id=com.andromedagames.billiardsgod&hl=ko" id="project-link-billiards"><b id="project-title-billiards">당구의 신 출시</b></a> <span id="tech-stack-billiards">- 안드로이드</span>
+                                                          <ul id="billiards-project-details">
+                                                              <li id="billiards-dev-cycle">프로젝트 계획부터 출시까지 개발, 유지 보수 및 캐릭터와 길드 등의 대규모 업데이트 개발</li>
+                                                              <li id="billiards-ui-role">주로 UI/UX 담당, 서버와 정보 교류</li>
+                                                          </ul>
+                                                      </div>
                           </div>
-                          <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-billiards">February 2015 - May 2016</span></div>
+                                                    <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-billiards">February 2015 - May 2016</span></div>
+                      !{renderedCarousels.billiards}
                       </div>
                   </div>
               </section>
@@ -437,9 +444,9 @@
                           </div>
                           <div class="flex-shrink-0">
                               <span class="text-primary" id="education-umd-dates">
-                      							<p id="education-umd-dates-1">August 2017 - May 2018</p>
-                      							<p id="education-umd-dates-2">August 2019 - November 2020</p>
-  						    </span>
+                                                  <p id="education-umd-dates-1">August 2017 - May 2018</p>
+                                                  <p id="education-umd-dates-2">August 2019 - November 2020</p>
+                              </span>
                           </div>
                       </div>
                       <div class="d-flex flex-column flex-md-row justify-content-between" id="education-entry-2">
@@ -461,9 +468,7 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
           <!-- Core theme JS-->
           <script src="/js/scripts.js"></script>
-  		<!--Iconify-->
-  		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+          <!--Iconify-->
+          <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </body>
   </html>
-
-

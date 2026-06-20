@@ -10,9 +10,304 @@ section.resume-section {
         width: 100%;
     }
 }
+
+.experience-media {
+    flex: 0 0 auto;
+    width: 34rem;
+    max-width: 100%;
+    margin: 0.75rem 0 0;
+}
+
+#experience .resume-section-content > .d-flex {
+    flex-direction: column !important;
+}
+
+.experience-media-thumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba($gray-700, 0.18);
+    border-radius: 0.35rem;
+    background: $gray-900;
+    color: $gray-600;
+    font-size: 1.65rem;
+}
+
+.experience-media-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-carousel .experience-media-thumb img {
+    object-fit: contain;
+}
+
+.experience-media-thumb img {
+    cursor: zoom-in;
+}
+
+.experience-media-thumb.is-contain img {
+    object-fit: contain;
+}
+
+.experience-media-empty {
+    background: linear-gradient(135deg, rgba($gray-200, 0.95), rgba($gray-100, 0.88));
+}
+
+.experience-carousel {
+    border-radius: 0.35rem;
+    overflow: hidden;
+}
+
+.experience-carousel .carousel-item {
+    transition-duration: 0s;
+}
+
+.experience-carousel .carousel-control-prev,
+.experience-carousel .carousel-control-next {
+    width: 3.15rem;
+    opacity: 0.92;
+    transition: opacity 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.experience-carousel .carousel-control-prev {
+    background: none;
+}
+
+.experience-carousel .carousel-control-next {
+    background: none;
+}
+
+.experience-carousel .carousel-control-prev:hover,
+.experience-carousel .carousel-control-next:hover,
+.experience-carousel .carousel-control-prev:focus,
+.experience-carousel .carousel-control-next:focus {
+    opacity: 1;
+}
+
+.experience-carousel .carousel-control-prev-icon,
+.experience-carousel .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba($gray-900, 0.72);
+    background-size: 56%;
+}
+
+.experience-carousel .carousel-indicators {
+    right: 0.8rem;
+    bottom: 0.72rem;
+    left: auto;
+    z-index: 5;
+    justify-content: flex-end;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.experience-carousel .carousel-indicators li {
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-right: 0.16rem;
+    margin-left: 0.16rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba($white, 0.58);
+    opacity: 1;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.experience-carousel .carousel-indicators .active {
+    width: 1rem;
+    border-radius: 999px;
+    background-color: $white;
+}
+
+.experience-media-chip {
+    position: absolute;
+    left: 0.65rem;
+    bottom: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.8rem;
+    padding: 0 0.65rem;
+    border-radius: 999px;
+    color: $white;
+    background-color: rgba($gray-900, 0.78);
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.experience-media-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+}
+
+.experience-media-links span,
+.experience-media-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.9rem;
+    padding: 0 0.7rem;
+    border: 1px solid rgba($primary, 0.35);
+    border-radius: 0.25rem;
+    color: $primary;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.experience-media-links a:hover,
+.experience-media-links a:focus {
+    color: $white;
+    background-color: $primary;
+    text-decoration: none;
+}
+
+.experience-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 2rem;
+    background: rgba($black, 0.92);
+}
+
+.experience-lightbox[hidden] {
+    display: none;
+}
+
+.experience-lightbox-image {
+    display: block;
+    max-width: 94vw;
+    max-height: 88vh;
+    object-fit: contain;
+}
+
+.experience-lightbox-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1px solid rgba($white, 0.45);
+    border-radius: 50%;
+    color: $white;
+    background: rgba($black, 0.55);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.experience-lightbox-close:hover,
+.experience-lightbox-close:focus {
+    background: rgba($white, 0.18);
+}
+
+.experience-lightbox-nav {
+    position: fixed;
+    top: 50%;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 1px solid rgba($white, 0.45);
+    border-radius: 50%;
+    color: $white;
+    background: rgba($black, 0.55);
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.experience-lightbox-nav[hidden] {
+    display: none;
+}
+
+.experience-lightbox-prev {
+    left: 1rem;
+}
+
+.experience-lightbox-next {
+    right: 1rem;
+}
+
+.experience-lightbox-nav:hover,
+.experience-lightbox-nav:focus {
+    background: rgba($white, 0.18);
+}
+
+body.experience-lightbox-open {
+    overflow: hidden;
+}
+
+@include media-breakpoint-down(sm) {
+    #experience .flex-shrink-0 {
+        margin-top: 0.25rem;
+    }
+
+    .experience-media {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0.75rem 0 0;
+    }
+
+    .experience-media-links span,
+    .experience-media-links a {
+        flex: 1 1 0;
+    }
+}
+
 @include media-breakpoint-up(md) {
     section.resume-section#about {
         min-height: 100vh;
+    }
+
+    #experience .resume-section-content > .d-flex {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 1.5rem;
+        align-items: start;
+    }
+
+    #experience .resume-section-content > .d-flex > .flex-grow-1 {
+        grid-column: 1;
+        grid-row: 1;
+        min-width: 0;
+    }
+
+    #experience .resume-section-content > .d-flex > .flex-shrink-0 {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    #experience .resume-section-content > .d-flex > .experience-media {
+        grid-column: 1 / -1;
+        grid-row: 2;
     }
 }
 @include media-breakpoint-up(lg) {
@@ -22,4 +317,5 @@ section.resume-section {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
 }
