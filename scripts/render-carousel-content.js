@@ -37,14 +37,14 @@ function renderMedia(media) {
     }
 
     const indicators = media.slides.map((slide, index) =>
-        `<li data-target="#${escapeHtml(media.id)}" data-slide-to="${index}"${index === 0 ? ' class="active"' : ''}></li>`
+        `<button type="button" data-bs-target="#${escapeHtml(media.id)}" data-bs-slide-to="${index}" aria-label="Slide ${index + 1}"${index === 0 ? ' class="active" aria-current="true"' : ''}></button>`
     ).join('');
 
     const slides = media.slides.map((slide, index) =>
         `<div class="carousel-item${index === 0 ? ' active' : ''}">${renderThumb(slide, index === 0)}</div>`
     ).join('');
 
-    return `<aside class="experience-media" aria-label="${escapeHtml(media.ariaLabel)}"><div id="${escapeHtml(media.id)}" class="carousel slide experience-carousel" data-ride="carousel" data-interval="false"><ol class="carousel-indicators">${indicators}</ol><div class="carousel-inner">${slides}</div><a class="carousel-control-prev" href="#${escapeHtml(media.id)}" role="button" data-slide="prev" aria-label="${escapeHtml(media.previousLabel)}"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#${escapeHtml(media.id)}" role="button" data-slide="next" aria-label="${escapeHtml(media.nextLabel)}"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div><div class="experience-media-links">${links}</div></aside>`;
+    return `<aside class="experience-media" aria-label="${escapeHtml(media.ariaLabel)}"><div id="${escapeHtml(media.id)}" class="carousel slide experience-carousel" data-bs-interval="false"><div class="carousel-indicators">${indicators}</div><div class="carousel-inner">${slides}</div><button class="carousel-control-prev" type="button" data-bs-target="#${escapeHtml(media.id)}" data-bs-slide="prev" aria-label="${escapeHtml(media.previousLabel)}"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#${escapeHtml(media.id)}" data-bs-slide="next" aria-label="${escapeHtml(media.nextLabel)}"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div><div class="experience-media-links">${links}</div></aside>`;
 }
 
 module.exports = function renderCarouselContent(carouselData) {

@@ -13394,7 +13394,7 @@ section.resume-section .resume-section-content {
   list-style: none;
 }
 
-.experience-carousel .carousel-indicators li {
+.experience-carousel .carousel-indicators button {
   display: block;
   width: 0.45rem;
   height: 0.45rem;

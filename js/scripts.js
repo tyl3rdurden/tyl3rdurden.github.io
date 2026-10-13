@@ -3,43 +3,29 @@
     * Copyright 2013-2026 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
     */
-    (function ($) {
-    "use strict"; // Start of use strict
+    (function () {
+    "use strict";
 
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
-                return false;
+    document.querySelectorAll('a.js-scroll-trigger[href*="#"]:not([href="#"])').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            if (link.pathname.replace(/^\//, "") !== location.pathname.replace(/^\//, "") ||
+                link.hostname !== location.hostname) return;
+
+            var target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+            if (!target) return;
+
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+
+            var menu = document.getElementById("navbarSupportedContent");
+            if (menu && menu.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
             }
-        }
+        });
     });
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    $(".js-scroll-trigger").click(function () {
-        $(".navbar-collapse").collapse("hide");
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $("body").scrollspy({
-        target: "#sideNav",
-    });
-})(jQuery); // End of use strict
+    bootstrap.ScrollSpy.getOrCreateInstance(document.body, { target: "#sideNav" });
+})();
 
 (function () {
     "use strict";

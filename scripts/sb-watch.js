@@ -1,86 +1,49 @@
 'use strict';
 
-const _ = require('lodash');
 const chokidar = require('chokidar');
+const { spawn } = require('child_process');
 const path = require('path');
-const renderAssets = require('./render-assets');
-const renderPug = require('./render-pug');
-const renderScripts = require('./render-scripts');
-const renderSCSS = require('./render-scss');
 
-const watcher = chokidar.watch(['src', 'assets'], {
-    persistent: true,
-});
+const root = path.resolve(__dirname, '..');
+const inputs = ['src', 'assets', 'templates', 'localization.json', 'content'];
+const watcher = chokidar.watch(inputs, { cwd: root, ignoreInitial: true });
 
-let READY = false;
+let timer;
+let building = false;
+let pendingCommand;
+let activeCommand;
 
-process.title = 'pug-watch';
-process.stdout.write('Loading');
-let allPugFiles = {};
+function build() {
+    if (building || !pendingCommand) return;
 
-watcher.on('add', filePath => _processFile(filePath, 'add'));
-watcher.on('change', filePath => _processFile(filePath, 'change'));
-watcher.on('ready', () => {
-    READY = true;
-    console.log(' READY TO ROLL!');
-});
-
-_handleSCSS();
-
-function _processFile(filePath, watchEvent) {
-    
-    if (!READY) {
-        if (filePath.match(/\.pug$/)) {
-            if (!filePath.match(/includes/) && !filePath.match(/mixins/) && !filePath.match(/\/pug\/layouts\//)) {
-                allPugFiles[filePath] = true;
-            }    
-        }    
-        process.stdout.write('.');
-        return;
-    }
-
-    console.log(`### INFO: File event: ${watchEvent}: ${filePath}`);
-
-    if (filePath.match(/\.pug$/)) {
-        return _handlePug(filePath, watchEvent);
-    }
-
-    if (filePath.match(/\.scss$/)) {
-        if (watchEvent === 'change') {
-            return _handleSCSS(filePath, watchEvent);
-        }
-        return;
-    }
-
-    if (filePath.match(/src\/js\//)) {
-        return renderScripts();
-    }
-
-    if (filePath.match(/(^|[\\/])assets[\\/]/)) {
-        return renderAssets();
-    }
-
-}
-
-function _handlePug(filePath, watchEvent) {
-    if (watchEvent === 'change') {
-        if (filePath.match(/includes/) || filePath.match(/mixins/) || filePath.match(/\/pug\/layouts\//)) {
-            return _renderAllPug();
-        }
-        return renderPug(filePath);
-    }
-    if (!filePath.match(/includes/) && !filePath.match(/mixins/) && !filePath.match(/\/pug\/layouts\//)) {
-        return renderPug(filePath);
-    }
-}
-
-function _renderAllPug() {
-    console.log('### INFO: Rendering All');
-    _.each(allPugFiles, (value, filePath) => {
-        renderPug(filePath);
+    building = true;
+    const command = pendingCommand;
+    activeCommand = command;
+    pendingCommand = undefined;
+    const child = spawn(command, { cwd: root, shell: true, stdio: 'inherit' });
+    child.on('error', error => {
+        console.error('Build could not start:', error);
+        building = false;
+    });
+    child.on('exit', code => {
+        building = false;
+        activeCommand = undefined;
+        if (code !== 0) console.error(`Build failed with exit code ${code}`);
+        if (pendingCommand) build();
     });
 }
 
-function _handleSCSS() {
-    renderSCSS();
-}
+watcher.on('all', (event, filePath) => {
+    if (!['add', 'change', 'unlink'].includes(event)) return;
+    if (activeCommand === 'npm run build' && /^templates[\\/]/.test(filePath)) return;
+    console.log(`### INFO: ${event}: ${filePath}`);
+    const command = /^(templates[\\/]|localization\.json$)/.test(filePath)
+        ? 'npm run build:locales'
+        : 'npm run build';
+    if (command === 'npm run build' || !pendingCommand) pendingCommand = command;
+    clearTimeout(timer);
+    timer = setTimeout(build, 200);
+});
+
+watcher.on('ready', () => console.log(`Watching ${inputs.join(', ')}`));
+watcher.on('error', error => console.error('Watcher error:', error));
