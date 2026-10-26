@@ -30,6 +30,34 @@
 (function () {
     "use strict";
 
+    function fitImage(image) {
+        if (!image.naturalWidth || !image.naturalHeight) return;
+        var thumb = image.closest(".experience-media-thumb");
+        // Use uniform frames within each orientation, regardless of small size differences.
+        var ratio = image.naturalWidth < image.naturalHeight ? 9 / 16 : 16 / 9;
+        thumb.style.setProperty("--media-aspect", ratio);
+        var carousel = image.closest(".experience-carousel");
+        if (carousel && image.closest(".carousel-item").classList.contains("active")) {
+            carousel.style.setProperty("--media-aspect", ratio);
+        }
+    }
+
+    document.querySelectorAll(".experience-media-thumb img").forEach(function (image) {
+        image.addEventListener("load", function () { fitImage(image); });
+        if (image.complete) fitImage(image);
+    });
+
+    document.querySelectorAll(".experience-carousel").forEach(function (carousel) {
+        carousel.addEventListener("slid.bs.carousel", function () {
+            var image = carousel.querySelector(".carousel-item.active img");
+            if (image) fitImage(image);
+        });
+    });
+})();
+
+(function () {
+    "use strict";
+
     var images = document.querySelectorAll(".experience-media-thumb img");
     if (!images.length) return;
     var korean = document.documentElement.lang === "ko";
