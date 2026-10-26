@@ -11,13 +11,13 @@ function escapeHtml(value) {
         .replace(/'/g, '&#39;');
 }
 
-function renderThumb(slide, priority = false) {
+function renderThumb(slide) {
     const classes = ['experience-media-thumb'];
     if (slide.fit === 'contain') classes.push('is-contain');
     if (!slide.image) classes.push('experience-media-empty');
 
     const media = slide.image
-        ? `<img src="${projectImagePath}${escapeHtml(slide.image)}" alt="${escapeHtml(slide.alt || '')}" loading="eager" decoding="async"${priority ? ' fetchpriority="high"' : ''}>`
+        ? `<img src="${projectImagePath}${escapeHtml(slide.image)}" alt="${escapeHtml(slide.alt || '')}" loading="lazy" decoding="async">`
         : `<i class="${escapeHtml(slide.icon)}" aria-hidden="true"></i>`;
 
     return `<div class="${classes.join(' ')}">${media}<span class="experience-media-chip">${escapeHtml(slide.label)}</span></div>`;
@@ -33,7 +33,7 @@ function renderMedia(media) {
     const links = renderLinks(media.links);
 
     if (media.slides.length === 1) {
-        return `<aside class="experience-media" aria-label="${escapeHtml(media.ariaLabel)}">${renderThumb(media.slides[0], true)}<div class="experience-media-links">${links}</div></aside>`;
+        return `<aside class="experience-media" aria-label="${escapeHtml(media.ariaLabel)}">${renderThumb(media.slides[0])}<div class="experience-media-links">${links}</div></aside>`;
     }
 
     const indicators = media.slides.map((slide, index) =>
@@ -41,7 +41,7 @@ function renderMedia(media) {
     ).join('');
 
     const slides = media.slides.map((slide, index) =>
-        `<div class="carousel-item${index === 0 ? ' active' : ''}">${renderThumb(slide, index === 0)}</div>`
+        `<div class="carousel-item${index === 0 ? ' active' : ''}">${renderThumb(slide)}</div>`
     ).join('');
 
     return `<aside class="experience-media" aria-label="${escapeHtml(media.ariaLabel)}"><div id="${escapeHtml(media.id)}" class="carousel slide experience-carousel" data-bs-interval="false"><div class="carousel-indicators">${indicators}</div><div class="carousel-inner">${slides}</div><button class="carousel-control-prev" type="button" data-bs-target="#${escapeHtml(media.id)}" data-bs-slide="prev" aria-label="${escapeHtml(media.previousLabel)}"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#${escapeHtml(media.id)}" data-bs-slide="next" aria-label="${escapeHtml(media.nextLabel)}"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div><div class="experience-media-links">${links}</div></aside>`;
@@ -53,11 +53,8 @@ module.exports = function renderCarouselContent(carouselData) {
         return rendered;
     }, {});
 
-    const carouselPreloads = Object.values(carouselData)
-        .flatMap(carousel => carousel.slides)
-        .filter(slide => slide.image)
-        .map(slide => `<link rel="preload" as="image" href="${projectImagePath}${escapeHtml(slide.image)}">`)
-        .join('');
+    // Project galleries sit below the introduction; let the browser load them on demand.
+    const carouselPreloads = '';
 
     return { carouselPreloads, renderedCarousels };
 };

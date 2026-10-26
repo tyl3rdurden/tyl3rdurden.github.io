@@ -35,3 +35,60 @@ p.lead {
     font-weight: 500;
     font-size: 1.5rem;
 }
+
+// Korean copy needs a full-width typeface and natural phrase wrapping.
+html[lang="ko"] {
+    body {
+        font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+        color: #535d65;
+        line-height: 1.7;
+        letter-spacing: -0.025em;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    h1, h2, h3, .subheading {
+        font-family: inherit;
+        text-transform: none;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.045em; }
+    h1 { font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 1rem !important; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.35rem; }
+    .subheading { font-size: 1.1rem; }
+    #contact-info { text-transform: none; }
+    #personal-statement { max-width: 48rem; font-size: 1.05rem; line-height: 1.8; }
+    #experience li + li { margin-top: 0.4rem; }
+    #experience .text-primary { white-space: nowrap; }
+
+    .container-fluid a, .container-fluid .text-primary {
+        color: #376d6c !important;
+    }
+    .container-fluid .social-icon { color: white !important; }
+    .experience-media-links a:hover, .experience-media-links a:focus {
+        color: #212529 !important;
+    }
+    #sideNav .nav-link { color: #263f3e; }
+    #sideNav .nav-link:hover, #sideNav .nav-link.active { color: #102524; }
+    #sideNav .navbar-brand { color: #203a39; }
+    #sideNav .navbar-toggler { border-color: #376d6c; }
+    #sideNav .navbar-toggler-icon { filter: brightness(0.3); }
+    .about-skills h2 { font-size: 2rem; }
+}
+
+#skills { scroll-margin-top: 5rem; }
+#portfolio .flex-grow-1 { min-width: 0; }
+#portfolio-image-hexgem {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 0.35rem;
+}
+
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+    outline: 3px solid #376d6c;
+    outline-offset: 4px;
+}

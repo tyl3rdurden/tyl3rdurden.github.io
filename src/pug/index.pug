@@ -178,16 +178,14 @@
                   <span class="d-block d-lg-none" id="navbar-name">이준렬</span>
                   <span class="d-none d-lg-block" id="profile-image-container"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/profile.jpg" alt="" /></span>
               </a>
-              <a class="lang-toggle-top d-none d-lg-block" data-lang-link="alternate" href="/"><i class="fas fa-globe me-1"></i><span>한국어</span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav">
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                      <li class="nav-item"><a id="nav-about" class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                      <li class="nav-item"><a id="nav-skills" class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                      <li class="nav-item"><a id="nav-experience" class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                      <li class="nav-item"><a id="nav-portfolio" class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                       <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>-->
-                      <li class="nav-item d-lg-none mt-3 text-center"><a class="nav-link lang-toggle" data-lang-link="alternate" href="/"><i class="fas fa-globe me-1"></i><span>한국어</span></a></li>
                   </ul>
               </div>
           </nav>
@@ -215,7 +213,7 @@
                           </div>
                           <div class="about-actions">
                               <div class="social-icons" id="social-links">
-                                  <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                                  <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden" aria-label="GitHub"><i class="fab fa-github" id="github-icon"></i></a>
                                   <a class="social-icon" id="linkedin-link" href="https://www.linkedin.com/in/joon-ryul-lee-2797282bb" aria-label="LinkedIn"><i class="fab fa-linkedin-in" id="linkedin-icon"></i></a>
                               </div>
                               <a class="btn btn-primary resume-download" href="/assets/Joon_Ryul_Lee_Resume.pdf" download="Joon_Ryul_Lee_Resume.pdf"><i class="fas fa-download"></i><span id="download-resume-link">Download Resume</span></a>
@@ -225,7 +223,7 @@
                           <h2 class="mb-4" id="skills-heading">Skills</h2>
                           <div class="skill-groups mb-4">
                               <div class="skill-group">
-                                  <div class="skill-group-title">Languages</div>
+                                  <div class="skill-group-title" id="skill-languages">Languages</div>
                                   <ul class="skill-chip-list">
                                       <li class="skill-chip">
                                           <i class="devicon-csharp-plain"></i>
@@ -242,7 +240,7 @@
                                   </ul>
                               </div>
                               <div class="skill-group">
-                                  <div class="skill-group-title">Engines</div>
+                                  <div class="skill-group-title" id="skill-engines">Engines</div>
                                   <ul class="skill-chip-list">
                                       <li class="skill-chip">
                                           <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
@@ -255,7 +253,7 @@
                                   </ul>
                               </div>
                               <div class="skill-group">
-                                  <div class="skill-group-title">Source Control</div>
+                                  <div class="skill-group-title" id="skill-source-control">Source Control</div>
                                   <ul class="skill-chip-list">
                                       <li class="skill-chip">
                                           <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
@@ -272,7 +270,7 @@
                                   </ul>
                               </div>
                               <div class="skill-group">
-                                  <div class="skill-group-title">Build & CI</div>
+                                  <div class="skill-group-title" id="skill-build-ci">Build & CI</div>
                                   <ul class="skill-chip-list">
                                       <li class="skill-chip">
                                           <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>

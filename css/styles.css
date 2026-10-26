@@ -13208,6 +13208,99 @@ p.lead {
   font-size: 1.5rem;
 }
 
+html[lang=ko] body {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #535d65;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+html[lang=ko] h1, html[lang=ko] .h1, html[lang=ko] h2, html[lang=ko] .h2, html[lang=ko] h3, html[lang=ko] .h3, html[lang=ko] .subheading {
+  font-family: inherit;
+  text-transform: none;
+  line-height: 1.4;
+}
+html[lang=ko] h1, html[lang=ko] .h1, html[lang=ko] h2, html[lang=ko] .h2, html[lang=ko] h3, html[lang=ko] .h3 {
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+html[lang=ko] h1, html[lang=ko] .h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  margin-bottom: 1rem !important;
+}
+html[lang=ko] h2, html[lang=ko] .h2 {
+  font-size: 2rem;
+}
+html[lang=ko] h3, html[lang=ko] .h3 {
+  font-size: 1.35rem;
+}
+html[lang=ko] .subheading {
+  font-size: 1.1rem;
+}
+html[lang=ko] #contact-info {
+  text-transform: none;
+}
+html[lang=ko] #personal-statement {
+  max-width: 48rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+html[lang=ko] #experience li + li {
+  margin-top: 0.4rem;
+}
+html[lang=ko] #experience .text-primary {
+  white-space: nowrap;
+}
+html[lang=ko] .container-fluid a, html[lang=ko] .container-sm a, html[lang=ko] .container-md a, html[lang=ko] .container-lg a, html[lang=ko] .container-xl a, html[lang=ko] .container-xxl a, html[lang=ko] .container-fluid .text-primary, html[lang=ko] .container-sm .text-primary, html[lang=ko] .container-md .text-primary, html[lang=ko] .container-lg .text-primary, html[lang=ko] .container-xl .text-primary, html[lang=ko] .container-xxl .text-primary {
+  color: #376d6c !important;
+}
+html[lang=ko] .container-fluid .social-icon, html[lang=ko] .container-sm .social-icon, html[lang=ko] .container-md .social-icon, html[lang=ko] .container-lg .social-icon, html[lang=ko] .container-xl .social-icon, html[lang=ko] .container-xxl .social-icon {
+  color: white !important;
+}
+html[lang=ko] .experience-media-links a:hover, html[lang=ko] .experience-media-links a:focus {
+  color: #212529 !important;
+}
+html[lang=ko] #sideNav .nav-link {
+  color: #263f3e;
+}
+html[lang=ko] #sideNav .nav-link:hover, html[lang=ko] #sideNav .nav-link.active {
+  color: #102524;
+}
+html[lang=ko] #sideNav .navbar-brand {
+  color: #203a39;
+}
+html[lang=ko] #sideNav .navbar-toggler {
+  border-color: #376d6c;
+}
+html[lang=ko] #sideNav .navbar-toggler-icon {
+  filter: brightness(0.3);
+}
+html[lang=ko] .about-skills h2, html[lang=ko] .about-skills .h2 {
+  font-size: 2rem;
+}
+
+#skills {
+  scroll-margin-top: 5rem;
+}
+
+#portfolio .flex-grow-1 {
+  min-width: 0;
+}
+
+#portfolio-image-hexgem {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 0.35rem;
+}
+
+a:focus-visible, button:focus-visible, [role=button]:focus-visible {
+  outline: 3px solid #376d6c;
+  outline-offset: 4px;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;

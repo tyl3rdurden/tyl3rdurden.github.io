@@ -7,25 +7,7 @@
         <meta name="author" content="" />
         <title id="page-title">이준렬 - 이력서</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-combat1.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-minigame-railroad.jpg" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-credits.png" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-combat2.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-dialogue.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-main-menu.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/blue-archive-menu.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/isegye.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/dinkum-mobile.webp" />
-        <link rel="preload" as="image" href="/assets/img/projects/undead.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/undead3.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/undead2.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/smash-legends.webp" />
-        <link rel="preload" as="image" href="/assets/img/projects/sl.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/sl2.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/hero.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/billiard-gameplay.jpg" />
-        <link rel="preload" as="image" href="/assets/img/projects/billiard-main-menu.JPG" />
-        <link rel="preload" as="image" href="/assets/img/projects/billiard-inventory.JPG" />
+
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -196,24 +178,14 @@
                 <span class="d-block d-lg-none" id="navbar-name">이준렬</span>
                 <span class="d-none d-lg-block" id="profile-image-container"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/profile.jpg" alt="" /></span>
             </a>
-            <a class="lang-toggle-top d-none d-lg-block" data-lang-link="alternate" href="/">
-                <i class="fas fa-globe me-1"></i>
-                <span>한국어</span>
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a id="nav-about" class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a id="nav-skills" class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a id="nav-experience" class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a id="nav-portfolio" class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>-->
-                    <li class="nav-item d-lg-none mt-3 text-center">
-                        <a class="nav-link lang-toggle" data-lang-link="alternate" href="/">
-                            <i class="fas fa-globe me-1"></i>
-                            <span>한국어</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -242,7 +214,7 @@
                         </div>
                         <div class="about-actions">
                             <div class="social-icons" id="social-links">
-                                <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden/HexGem"><i class="fab fa-github" id="github-icon"></i></a>
+                                <a class="social-icon" id="github-link" href="https://github.com/tyl3rdurden" aria-label="GitHub"><i class="fab fa-github" id="github-icon"></i></a>
                                 <a class="social-icon" id="linkedin-link" href="https://www.linkedin.com/in/joon-ryul-lee-2797282bb" aria-label="LinkedIn"><i class="fab fa-linkedin-in" id="linkedin-icon"></i></a>
                             </div>
                             <a class="btn btn-primary resume-download" href="/assets/Joon_Ryul_Lee_Resume.pdf" download="Joon_Ryul_Lee_Resume.pdf">
@@ -255,7 +227,7 @@
                         <h2 class="mb-4" id="skills-heading">Skills</h2>
                         <div class="skill-groups mb-4">
                             <div class="skill-group">
-                                <div class="skill-group-title">Languages</div>
+                                <div class="skill-group-title" id="skill-languages">Languages</div>
                                 <ul class="skill-chip-list">
                                     <li class="skill-chip">
                                         <i class="devicon-csharp-plain"></i>
@@ -272,7 +244,7 @@
                                 </ul>
                             </div>
                             <div class="skill-group">
-                                <div class="skill-group-title">Engines</div>
+                                <div class="skill-group-title" id="skill-engines">Engines</div>
                                 <ul class="skill-chip-list">
                                     <li class="skill-chip">
                                         <span class="iconify" data-icon="simple-icons:unity" data-inline="false"></span>
@@ -285,7 +257,7 @@
                                 </ul>
                             </div>
                             <div class="skill-group">
-                                <div class="skill-group-title">Source Control</div>
+                                <div class="skill-group-title" id="skill-source-control">Source Control</div>
                                 <ul class="skill-chip-list">
                                     <li class="skill-chip">
                                         <span class="iconify" data-icon="simple-icons:git" data-inline="false"></span>
@@ -302,7 +274,7 @@
                                 </ul>
                             </div>
                             <div class="skill-group">
-                                <div class="skill-group-title">Build & CI</div>
+                                <div class="skill-group-title" id="skill-build-ci">Build & CI</div>
                                 <ul class="skill-chip-list">
                                     <li class="skill-chip">
                                         <span class="iconify" data-icon="simple-icons:jenkins" data-inline="false"></span>
@@ -374,43 +346,43 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-combat1.JPG" alt="Blue Archive Combat" loading="eager" decoding="async" fetchpriority="high" />
+                                            <img src="/assets/img/projects/blue-archive-combat1.JPG" alt="Blue Archive Combat" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Combat</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-minigame-railroad.jpg" alt="Blue Archive railroad mini-game" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-minigame-railroad.jpg" alt="Blue Archive railroad mini-game" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Seasonal Content</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-credits.png" alt="Blue Archive Credits" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-credits.png" alt="Blue Archive Credits" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Credits Listing</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-combat2.JPG" alt="Blue Archive Combat2" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-combat2.JPG" alt="Blue Archive Combat2" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Combat Skill selection</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-dialogue.JPG" alt="Blue Archive story screenshot" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-dialogue.JPG" alt="Blue Archive story screenshot" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Dialogue</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-main-menu.JPG" alt="Blue Archive main menu" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-main-menu.JPG" alt="Blue Archive main menu" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Main Menu</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/blue-archive-menu.JPG" alt="Blue Archive menu" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/blue-archive-menu.JPG" alt="Blue Archive menu" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Character Selection</span>
                                         </div>
                                     </div>
@@ -467,13 +439,13 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/isegye.JPG" alt="Unreleased open world action RPG prototype" loading="eager" decoding="async" fetchpriority="high" />
+                                            <img src="/assets/img/projects/isegye.JPG" alt="Unreleased open world action RPG prototype" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Open World RPG</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/dinkum-mobile.webp" alt="Dinkum Mobile gameplay" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/dinkum-mobile.webp" alt="Dinkum Mobile gameplay" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Dinkum Mobile</span>
                                         </div>
                                     </div>
@@ -514,19 +486,19 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/undead.JPG" alt="Undead World zombie battle" loading="eager" decoding="async" fetchpriority="high" />
+                                            <img src="/assets/img/projects/undead.JPG" alt="Undead World zombie battle" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Combat</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/undead3.JPG" alt="Undead World zombie battle" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/undead3.JPG" alt="Undead World zombie battle" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Character Selection</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/undead2.JPG" alt="Undead World zombie battle" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/undead2.JPG" alt="Undead World zombie battle" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Menu</span>
                                         </div>
                                     </div>
@@ -568,19 +540,19 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/smash-legends.webp" alt="Smash Legends Dominion mode battle" loading="eager" decoding="async" fetchpriority="high" />
+                                            <img src="/assets/img/projects/smash-legends.webp" alt="Smash Legends Dominion mode battle" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Gameplay</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/sl.JPG" alt="Smash Legends duel gameplay" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/sl.JPG" alt="Smash Legends duel gameplay" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Duel</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb">
-                                            <img src="/assets/img/projects/sl2.JPG" alt="Smash Legends character selection screen" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/sl2.JPG" alt="Smash Legends character selection screen" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Character Selection</span>
                                         </div>
                                     </div>
@@ -615,7 +587,7 @@
                         <div class="flex-shrink-0"><span class="text-primary" id="period-andromeda-hero60">May 2018 - February 2019</span></div>
                         <aside class="experience-media" aria-label="60 Second Hero media">
                             <div class="experience-media-thumb is-contain">
-                                <img src="/assets/img/projects/hero.JPG" alt="60 Second Hero gameplay screenshot" loading="eager" decoding="async" fetchpriority="high" />
+                                <img src="/assets/img/projects/hero.JPG" alt="60 Second Hero gameplay screenshot" loading="lazy" decoding="async" />
                                 <span class="experience-media-chip">Gameplay</span>
                             </div>
                             <div class="experience-media-links"></div>
@@ -645,19 +617,19 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="experience-media-thumb is-contain">
-                                            <img src="/assets/img/projects/billiard-gameplay.jpg" alt="God of Billiards gameplay screenshot" loading="eager" decoding="async" fetchpriority="high" />
+                                            <img src="/assets/img/projects/billiard-gameplay.jpg" alt="God of Billiards gameplay screenshot" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Gameplay</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb is-contain">
-                                            <img src="/assets/img/projects/billiard-main-menu.JPG" alt="God of Billiards gameplay screenshot" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/billiard-main-menu.JPG" alt="God of Billiards gameplay screenshot" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Main Menu</span>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="experience-media-thumb is-contain">
-                                            <img src="/assets/img/projects/billiard-inventory.JPG" alt="God of Billiards gameplay screenshot" loading="eager" decoding="async" />
+                                            <img src="/assets/img/projects/billiard-inventory.JPG" alt="God of Billiards gameplay screenshot" loading="lazy" decoding="async" />
                                             <span class="experience-media-chip">Inventory</span>
                                         </div>
                                     </div>

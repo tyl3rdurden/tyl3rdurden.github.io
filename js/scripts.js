@@ -15,7 +15,7 @@
             if (!target) return;
 
             event.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? "auto" : "smooth" });
 
             var menu = document.getElementById("navbarSupportedContent");
             if (menu && menu.classList.contains("show")) {
@@ -32,12 +32,16 @@
 
     var images = document.querySelectorAll(".experience-media-thumb img");
     if (!images.length) return;
+    var korean = document.documentElement.lang === "ko";
+    var labels = korean
+        ? { dialog: "프로젝트 이미지 확대 보기", close: "확대 이미지 닫기", previous: "이전 이미지", next: "다음 이미지", view: "확대 보기: ", image: "프로젝트 이미지" }
+        : { dialog: "Expanded project image", close: "Close expanded image", previous: "Previous image", next: "Next image", view: "View larger: ", image: "project image" };
 
     var lightbox = document.createElement("div");
     lightbox.className = "experience-lightbox";
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
-    lightbox.setAttribute("aria-label", "Expanded project image");
+    lightbox.setAttribute("aria-label", labels.dialog);
     lightbox.hidden = true;
     lightbox.innerHTML =
         '<button class="experience-lightbox-close" type="button" aria-label="Close expanded image"><i class="fas fa-times" aria-hidden="true"></i></button>' +
@@ -50,6 +54,9 @@
     var previousButton = lightbox.querySelector(".experience-lightbox-prev");
     var nextButton = lightbox.querySelector(".experience-lightbox-next");
     var lightboxImage = lightbox.querySelector(".experience-lightbox-image");
+    closeButton.setAttribute("aria-label", labels.close);
+    previousButton.setAttribute("aria-label", labels.previous);
+    nextButton.setAttribute("aria-label", labels.next);
     var lastTrigger = null;
     var currentImages = [];
     var currentIndex = 0;
@@ -85,7 +92,7 @@
     images.forEach(function (image) {
         image.tabIndex = 0;
         image.setAttribute("role", "button");
-        image.setAttribute("aria-label", "View larger: " + (image.alt || "project image"));
+        image.setAttribute("aria-label", labels.view + (image.alt || labels.image));
         image.addEventListener("click", function () {
             openLightbox(image);
         });
@@ -112,5 +119,11 @@
         if (event.key === "Escape") closeLightbox();
         if (event.key === "ArrowLeft") showImage(currentIndex - 1);
         if (event.key === "ArrowRight") showImage(currentIndex + 1);
+        if (event.key === "Tab") {
+            var buttons = Array.prototype.filter.call(lightbox.querySelectorAll("button"), function (button) { return !button.hidden; });
+            var index = buttons.indexOf(document.activeElement);
+            event.preventDefault();
+            buttons[(index + (event.shiftKey ? -1 : 1) + buttons.length) % buttons.length].focus();
+        }
     });
 })();
